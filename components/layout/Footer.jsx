@@ -35,7 +35,6 @@ const Footer = () => {
                             </svg>
                         </a>
 
-                        {/* LinkedIn */}
                         <a
                             href=""
                             target="_blank"
@@ -52,7 +51,6 @@ const Footer = () => {
                             </svg>
                         </a>
 
-                        {/* YouTube */}
                         <a
                             href=""
                             target="_blank"
