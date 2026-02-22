@@ -69,7 +69,6 @@ const Footer = () => {
                             </svg>
                         </a>
 
-                        {/* X (Twitter) */}
                         <a
                             href=""
                             target="_blank"
@@ -88,7 +87,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Right Section */}
                 <div className="flex-1 flex flex-col justify-center items-center text-center">
                     <p className="citrus-gothic  text-[#FFAF00] text-[28px] md:text-[46px] leading-[28px] md:leading-[70px]">
                         Ready to start your <br /> Bharat journey?
