@@ -48,3 +48,104 @@ html {
 body {
   overflow-x: hidden;
 }
+.red-border {
+    position: absolute;
+    inset: 0;
+    left: 4rem;
+    right: 4rem;
+    top: -0.2rem;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+.program-border1 {
+    position: absolute;
+    inset: 0;
+    left: -4rem;
+    height: 100%;
+    background-image: url("/home/user-test-border.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+.program-border2 {
+    position: absolute;
+    inset: 0;
+    right: -7rem;
+    height: 100%;
+    background-image: url("/home/social-media-border.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+.program-border3 {
+    position: absolute;
+    inset: 0;
+    left: -3rem;
+    height: 100%;
+    background-image: url("/home/map-startup-border.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+.program-border4 {
+    position: absolute;
+    inset: 0;
+    top: -0.5rem;
+    right: -4rem;
+    height: 100%;
+    background-image: url("/home/quotes-border.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+.pink-white-background {
+    background-image: url(/home/pink-white-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pink-background {
+    background-image: url(/home/section-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+.how-to-apply-border-line {
+    position: absolute;
+    inset: 0;
+    left: 8rem;
+    height: 100%;
+    background-image: url(/home/how-to-apply-border.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+    z-index: 10;
+    pointer-events: none;
+}
+.footer-border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.5rem;
+    height: 100%;
+    background-image: url(/home/footer-border.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 20;
+    pointer-events: none;
+}
+.footer-background {
+    background-image: url(/home/footer-bg.webp);
+    height: 460px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
