@@ -130,16 +130,16 @@ body {
     z-index: 10;
     pointer-events: none;
 }
-.footer-border {
+.footer-border footer-border {
     position: absolute;
     left: 0;
     right: 0;
     top: 2.5rem;
     height: 100%;
-    background-image: url(/home/footer-border.webp);
+    background-image: url(/home/border-2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    z-index: 20;
+    z-index: 0;
     pointer-events: none;
 }
 .footer-background {
@@ -148,4 +148,23 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
+}
+.blog-hero-section {
+    background-image: url(/home/fellowship-program-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.related-blog-bg {
+    background-image: url(/home/related-blog-bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

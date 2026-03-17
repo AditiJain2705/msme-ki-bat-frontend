@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <div className="footer-background -mt-[2rem]">
+        <div className="footer-background -mt-[2rem] relative">
             <div className="max-w-7xl mx-auto px-[1rem] pt-[5rem] md:py-12 flex flex-col md:flex-row justify-between items-center gap-8">
 
                 {/* Left Section */}
@@ -85,7 +85,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-center items-center text-center">
+                <div className="flex-1 flex flex-col justify-center items-center text-center relative">
+                    <div className="hidden md:block footer-border"></div>
+
                     <p className="citrus-gothic  text-[#FFAF00] text-[28px] md:text-[46px] leading-[28px] md:leading-[70px]">
                         Ready to start your <br /> Bharat journey?
                     </p>
@@ -106,7 +108,6 @@ const Footer = () => {
                             Apply for The Program
                         </button>
                     </a>
-                    <div class="hidden md:block footer-border"></div>
 
                 </div>
             </div>

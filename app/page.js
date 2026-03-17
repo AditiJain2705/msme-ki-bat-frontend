@@ -18,7 +18,6 @@ export default function Home() {
       <WhoShouldApply />
       <HowToApply />
       <FaqSection />
-      <Footer />
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function AboutUs() {
                 <div className="w-full h-full bg-yellow-200 rounded-full transform rotate-45"></div>
             </div>
             {/* Background Image */}
-            {/* <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0">
                 <Image
                     src="/home/fellowship-program-bg.webp"
                     alt="Background"
@@ -17,7 +17,7 @@ export default function AboutUs() {
                     className="object-cover"
                     quality={100}
                 />
-            </div> */}
+            </div>
             {/* Section 1: Mission */}
             <section className="relative  flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
                 <div className="max-w-7xl w-full mx-auto">
