@@ -31,7 +31,8 @@ const WhoShouldApply = () => {
                         {/* Left Section */}
                         <div className="flex flex-col justify-center">
                             <h2 className="font-rough uppercase text-[36px] leading-[48px] md:text-[60px] lg:text-[80px] md:leading-[90px] citrus-gothic text-[#02443A]">
-                                Who should <span className="text-red-600">apply?</span>
+                                WHO IS
+                                <span className="text-red-600"> MSME KI BAAT </span>FOR?
                             </h2>
 
                             <div className="mt-6 w-[490px] max-w-full rotate-[-3deg] lg:block hidden">
@@ -49,10 +50,10 @@ const WhoShouldApply = () => {
                         <div className="space-y-6">
                             <ul className="space-y-4">
                                 {[
-                                    "2nd or 3rd-year undergraduates",
-                                    "Passionate about startups, storytelling, grassroots entrepreneurship",
-                                    "Active on LinkedIn/social media; comfortable with basic content creation",
-                                    "Fluent in Hindi or English, proactive, community-focused",
+                                    "MSME owners: Micro / Small / Medium",
+                                    "First-time founders & family businesses",
+                                    "Manufacturing + Services businesses",
+                                    "Anyone trying to understand: funding, schemes, bank process, compliance", "Hindi/English (Hinglish) audience who wants seedhi baat"
                                 ].map((item, index) => (
                                     <li
                                         key={index}
@@ -63,15 +64,11 @@ const WhoShouldApply = () => {
                                 ))}
                             </ul>
 
-                            <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSe9WPAJxJOqL454euQizEezBXmIudFjsA__-K1-2ZODJM17uA/viewform"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <button className="mt-6 md:mt-10 rounded-full border-2 border-[#094A72] px-10 py-3 font-bold text-[#094A72] transition hover:scale-105 hover:bg-[#094A72] hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#094A72] focus:ring-offset-2">
-                                    APPLY NOW
-                                </button>
-                            </a>
+
+                            <button className="mt-4 md:mt-10 rounded-full border-2 border-[#094A72] px-10 py-3 font-bold text-[#094A72] transition hover:scale-105 hover:bg-[#094A72] hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#094A72] focus:ring-offset-2">
+                                Suggest a Topic
+
+                            </button>
                         </div>
 
                     </div>

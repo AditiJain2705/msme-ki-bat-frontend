@@ -35,18 +35,17 @@ export default function HeroSection() {
                         JOIN INDIA'S{' '}
                         <span className="text-[#E63946]">NEXT GENERATION</span> OF
                         <br />
-                        CHANGEMAKERS
+                        MSME GROWTH STORIES
                     </h3>
 
                     {/* Subheading */}
                     <p className="nave-font mx-auto mb-5 max-w-3xl text-sm leading-relaxed text-[#02443A] sm:text-xl lg:mb-12 lg:text-2xl">
-                        Become a Bharat Fellow and empower entrepreneurs across Tier 2 and
-                        Tier 3 India
+                        Short, fact-based conversations for MSMEs - funding, compliance, growth, and execution.
                     </p>
 
                     {/* CTA Button */}
                     <button className="citrus-gothic rounded-full bg-[#FFAF00] px-10 py-3 text-lg font-medium uppercase tracking-wide text-[#02443A] shadow-lg transition-all hover:bg-[#FF8C00] hover:shadow-xl sm:px-12 sm:py-5 sm:text-xl lg:px-14 lg:py-4 lg:text-2xl mb-36">
-                        Apply for the Program
+                        Watch the Latest Episode
                     </button>
                 </div>
             </div>

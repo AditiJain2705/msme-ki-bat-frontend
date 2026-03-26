@@ -31,9 +31,9 @@ const HowToApply = () => {
                             <div className="relative flex w-full items-start justify-start">
 
 
-                                <p className="left-1/5 lg:left-3/4 relative w-full citrus-gothic text-[60px] lg:text-[72px] leading-[80px] uppercase text-[#02443A]">
-                                    How to <br />
-                                    <span className="text-[#F63A49]">apply ?</span>
+                                <p className="left-1/5 lg:left-1/2 relative w-full citrus-gothic text-[60px] leading-[80px] uppercase text-[#02443A]">
+                                    How to<br />
+                                    <span className="text-[#F63A49]">PARTICIPATE ?</span>
                                 </p>
                             </div>
 
@@ -55,8 +55,10 @@ const HowToApply = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-4 max-w-[280px] pl-[2.5rem] text-left font-nave-medium text-[18px] leading-[28px] text-[#02443A] md:text-[20px]">
-                                <p>Complete the online application form.</p>
+                            <div className="mt-4 max-w-[320px] pl-[2.5rem] text-left font-nave-medium text-[18px] leading-[28px] text-[#02443A] md:text-[20px]">
+                                <p><strong>Watch an episode
+                                </strong><br />Start with the latest or the “Funding Schemes” playlist.
+                                </p>
                             </div>
                         </div>
 
@@ -80,7 +82,9 @@ const HowToApply = () => {
                             </div>
 
                             <div className="mt-4 max-w-[280px] pl-[2.5rem] text-left font-nave-medium text-[18px] leading-[28px] text-[#02443A] md:text-[20px]">
-                                <p>Share LinkedIn profile (mandatory).</p>
+                                <p><span>Send your question / topic
+                                </span><br />Comment or submit topic request (funding, compliance, growth, etc.)
+                                </p>
                             </div>
                         </div>
 
@@ -105,14 +109,13 @@ const HowToApply = () => {
 
                             <div className="mt-4 max-w-[280px] text-left font-nave-medium text-[18px] leading-[28px] text-[#02443A] md:text-[20px]">
                                 <p>
-                                    Submit a{" "}
-                                    <span className="text-[#F63A49]">
-                                        short video (3–5 min)
-                                    </span>{" "}
-                                    on YouTube (unlisted)
+                                    <span>Get the next playbook
+                                    </span><br />
+                                    We’ll cover your topics with research + practical next steps.
+
                                 </p>
 
-                                <ul className="mt-4 space-y-2 text-[16px] leading-[26px] md:text-[18px]">
+                                {/* <ul className="mt-4 space-y-2 text-[16px] leading-[26px] md:text-[18px]">
                                     <li className="flex gap-2">
                                         <span className="mt-[6px] h-2 w-2 rounded-full bg-[#0B4B3D]" />
                                         <span>
@@ -140,7 +143,7 @@ const HowToApply = () => {
                                             </span>.
                                         </span>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
 

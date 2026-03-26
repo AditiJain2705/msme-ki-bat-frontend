@@ -21,9 +21,9 @@ const WhyChooseUs = () => {
                 {/* LEFT CONTENT */}
                 <div className="w-full md:w-1/2 text-white">
                     <h2 className="text-4xl font-medium  md:text-6xl">
-                        WHY THE <span className="text-yellow-400">BHARAT</span>
-                        <br />
-                        <span className="text-yellow-400">FELLOWSHIP?</span>
+                        WHY  <span className="text-yellow-400">MSME KI BAAT?
+                        </span>
+
                     </h2>
 
                     <div className="mt-8">
@@ -32,12 +32,29 @@ const WhyChooseUs = () => {
                         </h3>
 
                         <p className="mt-4 text-lg leading-relaxed text-gray-100 nave-font">
-                            Entrepreneurs in smaller Indian cities need more than inspiration—
-                            they need practical <span className="text-yellow-400">support</span>,{" "}
-                            <span className="text-yellow-400">local advocates</span>, and access to{" "}
-                            <span className="text-yellow-400">real resources</span>. Fellows bridge
-                            that gap by engaging directly with local startup communities and
-                            sharing their stories broadly.
+                            India mein <span className="text-yellow-400">MSMEs</span> ke liye opportunities bhi hain
+                            aur schemes bhi — lekin confusion bhi bahut hai:
+                        </p>
+
+                        <ul className="mt-4 text-lg leading-relaxed text-gray-100 nave-font list-disc pl-6 space-y-2">
+                            <li>
+                                <span className="text-yellow-400">Scheme real hai ya marketing?</span>
+                            </li>
+                            <li>
+                                <span className="text-yellow-400">Bank loan kyun reject hota hai?</span>
+                            </li>
+                            <li>
+                                <span className="text-yellow-400">Documentation aur eligibility ka actual meaning kya hai?</span>
+                            </li>
+                            <li>
+                                <span className="text-yellow-400">Funding-ready banne ke liye kya change karna padta hai?</span>
+                            </li>
+                        </ul>
+
+                        <p className="mt-4 text-lg leading-relaxed text-gray-100 nave-font">
+                            <span className="text-yellow-400">MSME Ki Baat</span> isi gap ko fill karta hai —
+                            <span className="text-yellow-400">facts</span> + simple explanation +
+                            <span className="text-yellow-400">next steps</span>.
                         </p>
                     </div>
                 </div>
@@ -59,7 +76,8 @@ const WhyChooseUs = () => {
             <WhyJoinSection />
             <div className="w-full flex justify-center">
                 <button className="citrus-gothic rounded-full bg-[#FFAF00] px-10 py-3 text-lg font-medium uppercase tracking-wide text-[#02443A] shadow-lg transition-all hover:bg-[#FF8C00] hover:shadow-xl sm:px-12 sm:py-5 sm:text-xl lg:px-14 lg:py-4 lg:text-2xl my-10">
-                    Apply for the Program
+                    Watch the Latest Episode
+
                 </button>
             </div>
 

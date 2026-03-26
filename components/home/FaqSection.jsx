@@ -7,44 +7,52 @@ const faqs = [
     {
         question: (
             <>
-                What’s the{" "}
-                <span className="text-[#FFAF00]">time commitment?</span>
+                Episodes kitne{" "}
+                <span className="text-[#FFAF00]">time ke hote hain?</span>
             </>
         ),
         answer:
-            "You’ll need to give around 6–8 hours a week for user testing, content creation, and reporting.",
+            "Mostly 3–8 minutes. Topic deep ho to special episodes longer ho sakte hain.",
     },
     {
         question: (
             <>
-                What’s the required{" "}
-                <span className="text-[#FFAF00]">Prior experience?</span>
+                Kya yeh{" "}
+                <span className="text-[#FFAF00]">paid consulting hai?</span>
             </>
         ),
         answer:
-            "No prior experience is required — just consistency, curiosity, and willingness to engage with entrepreneurs.",
+            "Nahi. Yeh channel education + clarity ke liye hai. (Agar future mein paid services add hongi, clearly mention hongi.)",
     },
     {
         question: (
             <>
-                Is there any{" "}
-                <span className="text-[#FFAF00]">offered stipend?</span>
+                Kya aap schemes{" "}
+                <span className="text-[#FFAF00]">apply karwa dete ho?</span>
             </>
         ),
         answer:
-            "Yes, a stipend begins from Stage 2, along with an official Fellowship Certificate.",
+            "Hum \"apply karwaane\" ka claim nahi karte. Hum aapko system samjhate hain aur funding-ready banne ke steps dete hain.",
     },
     {
         question: (
             <>
-                What if I am{" "}
-                <span className="text-[#FFAF00]">
-                    Not 2nd/3rd-year student?
-                </span>
+                Kya yeh content{" "}
+                <span className="text-[#FFAF00]">beginners ke liye hai?</span>
             </>
         ),
         answer:
-            "You can still apply — the fellowship is open to any student with entrepreneurial intent and commitment.",
+            "Haan — simple language, practical structure. Advanced viewers ko bhi frameworks milenge.",
+    },
+    {
+        question: (
+            <>
+                Topic suggest{" "}
+                <span className="text-[#FFAF00]">kaise karein?</span>
+            </>
+        ),
+        answer:
+            "Comment/WhatsApp/Form (jo bhi aap integrate karoge) — \"Topic + your business type + city/state\".",
     },
 ];
 

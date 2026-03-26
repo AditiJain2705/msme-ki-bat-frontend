@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Citrus Gothic';
-  src: url('/fonts/CitrusGothicSolid-Regular.ttf') format('truetype');
+  font-family: "Citrus Gothic";
+  src: url("/fonts/CitrusGothicSolid-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nave';
-  src: url('/fonts/nave-regular.ttf') format('truetype');
+  font-family: "Nave";
+  src: url("/fonts/nave-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,17 +24,17 @@
 
 @layer utilities {
   .citrus-gothic {
-    font-family: 'Citrus Gothic', sans-serif;
+    font-family: "Citrus Gothic", sans-serif;
   }
 
   .nave-font {
-    font-family: 'Nave', sans-serif;
+    font-family: "Nave", sans-serif;
   }
 }
 
 @layer components {
   .nav-link {
-    font-family: 'Citrus Gothic', sans-serif;
+    font-family: "Citrus Gothic", sans-serif;
     @apply text-sm font-bold uppercase tracking-wide text-[#0D5B52] transition-colors hover:text-[#FFA500];
   }
 }
@@ -49,117 +49,117 @@ body {
   overflow-x: hidden;
 }
 .red-border {
-    position: absolute;
-    inset: 0;
-    left: 4rem;
-    right: 4rem;
-    top: -0.2rem;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  left: 4rem;
+  right: 4rem;
+  top: -0.2rem;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
 }
 .program-border1 {
-    position: absolute;
-    inset: 0;
-    left: -4rem;
-    height: 100%;
-    background-image: url("/home/user-test-border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  left: -2.5rem;
+  height: 100%;
+  background-image: url("/home/user-test-border.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
 }
 .program-border2 {
-    position: absolute;
-    inset: 0;
-    right: -7rem;
-    height: 100%;
-    background-image: url("/home/social-media-border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  right: 0rem;
+  height: 100%;
+  background-image: url("/home/social-media-border.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
 }
 .program-border3 {
-    position: absolute;
-    inset: 0;
-    left: -3rem;
-    height: 100%;
-    background-image: url("/home/map-startup-border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  left: -3rem;
+  height: 100%;
+  background-image: url("/home/map-startup-border.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
 }
 .program-border4 {
-    position: absolute;
-    inset: 0;
-    top: -0.5rem;
-    right: -4rem;
-    height: 100%;
-    background-image: url("/home/quotes-border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  top: -0.5rem;
+  right: -4rem;
+  height: 100%;
+  background-image: url("/home/quotes-border.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
 }
 .pink-white-background {
-    background-image: url(/home/pink-white-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(/home/pink-white-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pink-background {
-    background-image: url(/home/section-bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: -1rem;
-    margin-bottom: -1rem;
+  background-image: url(/home/section-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
 }
 .how-to-apply-border-line {
-    position: absolute;
-    inset: 0;
-    left: 8rem;
-    height: 100%;
-    background-image: url(/home/how-to-apply-border.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center top;
-    z-index: 10;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  left: 8rem;
+  height: 100%;
+  background-image: url(/home/how-to-apply-border.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+  z-index: 10;
+  pointer-events: none;
 }
 .footer-border footer-border {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 2.5rem;
-    height: 100%;
-    background-image: url(/home/border-2.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    z-index: 0;
-    pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.5rem;
+  height: 100%;
+  background-image: url(/home/border-2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 .footer-background {
-    background-image: url(/home/footer-bg.webp);
-    height: 460px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
+  background-image: url(/home/footer-bg.webp);
+  height: 460px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 .blog-hero-section {
-    background-image: url(/home/fellowship-program-bg.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
+  background-image: url(/home/fellowship-program-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 .related-blog-bg {
-    background-image: url(/home/related-blog-bg1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
+  background-image: url(/home/related-blog-bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;

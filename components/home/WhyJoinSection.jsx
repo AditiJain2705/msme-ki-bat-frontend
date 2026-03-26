@@ -5,25 +5,30 @@ const WhyJoinSection = () => {
     const benefits = [
         {
             id: '01',
+            title: "Clarity in 3–8 minutes",
             text: (
                 <>
-                    Gain hands-on experience in <strong>real-world user research</strong>, <strong>community building</strong>, and high-impact content creation
+                    Har episode short, crisp, aur directly applicable.
+
                 </>
             ),
         },
         {
             id: '02',
+            title: "Facts-first, no hype",
             text: (
                 <>
-                    Receive a <strong>monthly stipend</strong> and an <strong>official Bharat Fellowship Certificate</strong> to strengthen your professional portfolio
+                    Official sources, simple breakdowns, real-world logic.
+
                 </>
             ),
         },
         {
             id: '03',
+            title: "Execution frameworks",
             text: (
                 <>
-                    Access exclusive <strong>networking and mentorship</strong> opportunities with <strong>entrepreneurs, industry leaders, and changemakers</strong>
+                    Funding readiness, financial hygiene, compliance checklist, growth systems - step-by-step.
                 </>
             ),
         },
@@ -51,6 +56,7 @@ const WhyJoinSection = () => {
                                 {benefit.id}
                             </span>
                             <p className="text-[#0c355a] text-lg leading-relaxed font-medium nave-font">
+                                <span><strong>{benefit.title} </strong></span><br />
                                 {benefit.text}
                             </p>
                         </div>

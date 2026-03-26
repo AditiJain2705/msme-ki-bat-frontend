@@ -27,11 +27,12 @@ export default function AboutUs() {
                         <div className="lg:col-span-7 space-y-8 lg:pl-8">
                             {/* Header with pink X decoration */}
                             <div className="relative text-center">
-                                <h2 className="text-5xl sm:text-6xl  font-black leading-tight">
-                                    ABOUT THE
+                                <h2 className="text-5xl sm:text-6xl  font-semibold leading-tight">
+                                    ABOUT
                                 </h2>
-                                <h2 className="text-5xl sm:text-6xl  font-black text-[#094A72] leading-tight">
-                                    FELLOWSHIP
+                                <h2 className="text-5xl sm:text-6xl  font-semibold text-[#094A72] leading-tight">
+                                    MSME KI BAAT
+
                                 </h2>
                             </div>
 
@@ -74,27 +75,19 @@ export default function AboutUs() {
                         <div className="md:col-span-7 space-y-6  order-1 md:order-2 ">
                             <div className="space-y-3 text-xl sm:text-[28px] xl:text-4xl leading-snug font-normal md:font-bold">
                                 {/* Mission statement */}
-                                <div className="space-y-3 leading-snug font-normal md:font-bold  xl:pt-12 mb-12 xl:mb-20">
+                                <div className="space-y-3 leading-snug font-normal md:font-medium pt-14 xl:pt-12 mb-12 md:mb-36 xl:mb-20">
                                     <p className="text-[#02443A]">
-                                        BUILD A <span className="text-red-500">NETWORK OF STUDENT-FELLOWS</span> DEDICATED TO ACCELERATING GRASSROOTS INNOVATION AND SPOTLIGHTING      <span className="text-red-500 " > UNTOLD ENTREPRENEURIAL STORIES</span>
-                                        {' '} FROM ACROSS BHARAT.
+                                        Make
+                                        <span className="text-yellow-500"> MSMEs funding-ready and execution-ready</span>{' '}
+                                        practical, step-by-step clarity.
 
                                     </p>
 
 
                                 </div>
-                                <p className='mb-8 md:mb-12'>
-                                    <span className="text-yellow-500">TRAIN, EMPOWER, AND MOBILIZE YOUNG LEADERS,</span>{' '}
-                                    <span className="text-[#02443A]">BUILDING A</span>
-                                    <span className="text-[#02443A]">
-                                        NATIONWIDE MOVEMENT THAT CREATES AND ENABLES{" "}
-                                    </span>
-                                    <span className="text-yellow-500 ">
-                                        1 MILLION NEW ENTREPRENEURS
-                                    </span>{' '}
-                                    <span className="text-[#02443A]">
-                                        BEYOND INDIA'S METROS.
-                                    </span>
+                                <p className='mb-8 md:mb-12 text-[#02443A]'>
+                                    Build a  <span className="text-red-500">trusted library of MSME knowledge -</span> schemes, compliance, finance hygiene, and growth playbooks -<span className="text-red-500 " > in simple Hinglish.</span>
+
                                 </p>
 
                             </div>

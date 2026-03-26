@@ -89,14 +89,16 @@ const Footer = () => {
                     <div className="hidden md:block footer-border"></div>
 
                     <p className="citrus-gothic  text-[#FFAF00] text-[28px] md:text-[46px] leading-[28px] md:leading-[70px]">
-                        Ready to start your <br /> Bharat journey?
+                        Ready to make your
+                        <br /> MSME funding-ready?
                     </p>
 
                     <p className="nave-font text-[14px] md:text-[22px] leading-[18px] md:leading-[26px] text-white my-6">
-                        Become a Bharat Fellow and empower
+                        Seedhi baat, real facts,
+
                         <br />
-                        entrepreneurs{" "}
-                        <span className="text-[#FFAF00]">Tier 2 and Tier 3</span> India
+                        practical steps -
+                        <span className="text-[#FFAF00]">every week.</span>
                     </p>
 
                     <a
@@ -105,7 +107,8 @@ const Footer = () => {
                         rel="noopener noreferrer"
                     >
                         <button className="citrus-gothic  bg-[#FFAF00] rounded-full w-[300px] md:w-[374px] h-[45px] md:h-[50px] text-[18px] font-medium text-[#121212] transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:text-[#02443A]">
-                            Apply for The Program
+                            Watch the Latest Episode
+
                         </button>
                     </a>
 
