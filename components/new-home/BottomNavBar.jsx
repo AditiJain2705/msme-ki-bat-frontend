@@ -21,7 +21,7 @@ const NAV_ITEMS = [
 
 export default function BottomNavBar() {
     return (
-        <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-[#fff9eb]/90  backdrop-blur-xl shadow-[0_-4px_24px_rgba(54,51,35,0.08)] border-t-4 border-tertiary">
+        <nav className="fixed lg:hidden block bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-[#fff9eb]/90  backdrop-blur-xl shadow-[0_-4px_24px_rgba(54,51,35,0.08)] border-t-4 border-tertiary">
             {NAV_ITEMS.map(({ href, icon, label, active, fillIcon }) =>
                 active ? (
                     <Link

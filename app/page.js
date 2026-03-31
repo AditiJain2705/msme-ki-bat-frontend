@@ -3,14 +3,14 @@ import HeritageAnalysis from "@/components/new-home/Heritageanalysis";
 import HeroSection from "@/components/new-home/Herosection";
 import QuickInsights from "@/components/new-home/Quickinsights";
 import TopAppBar from "@/components/new-home/Topappbar";
-import TopBusinessNews from "@/components/new-home/Topbusinessnews";
+import TopBusinessNews from "@/components/new-home/TopBusinessNews";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <TopAppBar />
-      <main className="pb-32">
+      <main className="pb-32 lg:pb-12 ">
         <HeroSection />
         <QuickInsights />
         <TopBusinessNews />

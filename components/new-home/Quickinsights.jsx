@@ -26,20 +26,22 @@ const VIDEOS = [
 
 export default function QuickInsights() {
     return (
-        <section className="py-8 bg-surface-container-low relative overflow-hidden">
+        <section className="py-8 bg-surface-container-low relative overflow-hidden ">
             <div className="heritage-pattern-strip absolute top-0 left-0 w-full h-1" />
 
-            <div className="flex justify-between items-end px-6 mb-6">
+            <div className="flex justify-between items-end px-6 lg:px-0 mb-6 max-w-6xl mx-auto">
                 <div>
-                    <h3 className="font-headline text-2xl font-bold text-primary">Quick Insights</h3>
-                    <p className="font-body text-sm text-on-surface-variant">Expert analysis in 60 seconds</p>
+                    <h3 className="font-headline text-2xl md:text-3xl font-bold text-primary pb-2">Expert Insights</h3>
+                    <p className="font-body text-sm md:text-base text-on-surface-variant">
+                        Expert analysis in 60 seconds
+                    </p>
                 </div>
                 <button className="text-secondary font-bold text-sm tracking-wide uppercase">
                     View All
                 </button>
             </div>
 
-            <div className="flex gap-4 overflow-x-auto px-6 hide-scrollbar">
+            <div className="flex gap-4 overflow-x-auto px-6 lg:px-0 hide-scrollbar max-w-6xl mx-auto">
                 {VIDEOS.map((video) => (
                     <VideoCard key={video.id} {...video} />
                 ))}

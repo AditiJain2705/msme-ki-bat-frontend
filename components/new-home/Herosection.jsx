@@ -32,29 +32,29 @@ export default function HeroSection() {
 
     return (
         <div
-            className="  px-4"
+            className="  px-4 flex items-center justify-center w-full"
             style={{
                 backgroundImage: "url('/new-home/hero-bg.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
         >
-            <div className="w-full max-w-sm text-center pt-12 pb-16">
+            <div className="w-full max-w-sm text-center pt-14 pb-16">
 
                 {/* Typewriter Text */}
-                <h2 className="text-3xl font-semibold text-gray-800 mb-1">
+                <h2 className="text-4xl font-semibold text-gray-800 mb-6 arya">
                     {text}
                     <span className="animate-pulse">|</span>
                 </h2>
 
                 {/* TV Image */}
-                <div className="flex justify-center">
+                <div className="flex items-center justify-center mb-8">
                     <Image
-                        src="/new-home/tv.webp"
+                        src="/new-home/tv-with-logo.webp"
                         alt="TV"
-                        width={400}
-                        height={400}
-                        className="object-contain"
+                        width={600}
+                        height={600}
+                        className="h-60 w-auto "
                     />
                 </div>
 
@@ -91,6 +91,6 @@ export default function HeroSection() {
                 </button>
 
             </div>
-        </div>
+        </div >
     );
 }

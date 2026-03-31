@@ -115,14 +115,20 @@
   }
 }
 
-/* @font-face {
-  font-family: "Citrus Gothic";
-  src: url("/fonts/CitrusGothicSolid-Regular.ttf") format("truetype");
+@font-face {
+  font-family: "Arya";
+  src: url("/fonts/Arya-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+@layer utilities {
+  .arya {
+    font-family: "Arya", sans-serif;
+  }
+}
 
+/*
 @font-face {
   font-family: "Nave";
   src: url("/fonts/nave-regular.ttf") format("truetype");

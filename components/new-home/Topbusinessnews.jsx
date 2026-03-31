@@ -39,16 +39,23 @@ const COMPACT_NEWS = [
 
 export default function TopBusinessNews() {
     return (
-        <section className="px-6 py-10 space-y-8">
-            <h3 className="font-headline text-2xl font-bold border-l-4 border-tertiary pl-4 text-on-surface">
+        <section className="px-6 py-10 lg:px-0 space-y-8 max-w-6xl mx-auto">
+            <h3 className="font-headline text-2xl md:text-3xl font-bold border-l-4 border-tertiary pl-4 text-on-surface">
                 Top Business News
             </h3>
 
-            <NewsCardFeatured {...FEATURED_NEWS} />
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <NewsCardFeatured {...FEATURED_NEWS} />
 
-            {COMPACT_NEWS.map((item) => (
-                <NewsCardCompact key={item.id} {...item} />
-            ))}
+            </div>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+
+                {COMPACT_NEWS.map((item) => (
+                    <NewsCardCompact key={item.id} {...item} />
+
+                ))}
+            </div>
+
         </section>
     );
 }

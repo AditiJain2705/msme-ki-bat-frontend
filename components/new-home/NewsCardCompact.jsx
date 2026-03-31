@@ -7,13 +7,13 @@ export default function NewsCardCompact({ src, alt, tag, tagColor = "secondary",
     return (
         <div className={`flex gap-4 items-start py-4 ${hasBorder ? "border-b border-outline-variant/10" : ""}`}>
             <div className="flex-1">
-                <span className={`${tagColorMap[tagColor]} font-bold text-[10px] uppercase tracking-widest mb-1 block`}>
+                <span className={`${tagColorMap[tagColor]} font-bold text-xs lg:text-sm uppercase tracking-widest mb-1 block`}>
                     {tag}
                 </span>
-                <h4 className="font-headline text-lg font-bold leading-tight mb-2">{title}</h4>
-                <p className="text-xs text-on-surface-variant line-clamp-2">{excerpt}</p>
+                <h4 className="font-headline text-xl lg:text-2xl font-bold leading-tight mb-2">{title}</h4>
+                <p className="text-sm lg:text-base text-on-surface-variant line-clamp-2">{excerpt}</p>
             </div>
-            <div className="w-24 h-24 rounded-lg bg-surface-container-highest overflow-hidden flex-none">
+            <div className="size-24 lg:size-28 rounded-lg bg-surface-container-highest overflow-hidden flex-none">
                 <img alt={alt} className="w-full h-full object-cover opacity-90" src={src} />
             </div>
         </div>
