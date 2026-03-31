@@ -37,7 +37,7 @@ const COMPACT_NEWS = [
     },
 ];
 
-export default function TopBusinessNews() {
+export default function TopBusinessNewsSection() {
     return (
         <section className="px-6 py-10 lg:px-0 space-y-8 max-w-6xl mx-auto">
             <h3 className="font-headline text-2xl md:text-3xl font-bold border-l-4 border-tertiary pl-4 text-on-surface">
