@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import TopAppBar from "@/components/new-home/Topappbar";
+import BottomNavBar from "@/components/new-home/BottomNavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container`}
       >
+        <TopAppBar />
         {children}
+        <BottomNavBar />
       </body>
     </html>
   );

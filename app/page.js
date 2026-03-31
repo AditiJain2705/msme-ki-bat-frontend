@@ -9,14 +9,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <TopAppBar />
       <main className="pb-32 lg:pb-12 ">
         <HeroSection />
         <QuickInsights />
         <TopBusinessNewsSection />
         <HeritageAnalysis />
       </main>
-      <BottomNavBar />
     </>
   );
 }

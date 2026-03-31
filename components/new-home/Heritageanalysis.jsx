@@ -1,6 +1,11 @@
+"use client";
+import { useState } from "react";
+import LeadFormPopup from "../form/Leadformpopup";
 const TAGS = ["The Tatas", "Textile History", "Banking Roots"];
 
 export default function HeritageAnalysis() {
+    const [open, setOpen] = useState(false);
+
     return (
         <section className="px-6 lg:px-0 pb-4  max-w-6xl mx-auto">
             <div className="bg-primary text-on-primary p-6 rounded-2xl relative overflow-hidden shadow-xl">
@@ -14,16 +19,18 @@ export default function HeritageAnalysis() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {TAGS.map((tag) => (
-                            <span
+                            <button onClick={() => setOpen(true)}
                                 key={tag}
                                 className="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[11px] md:text-sm font-bold"
                             >
                                 {tag}
-                            </span>
+                            </button>
                         ))}
                     </div>
                 </div>
             </div>
+            {open && <LeadFormPopup isOpen={open} onClose={() => setOpen(false)} />}
+
         </section>
     );
 }
