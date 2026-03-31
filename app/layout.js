@@ -21,10 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container`}
       >
         {children}
-        <Footer />
       </body>
     </html>
   );

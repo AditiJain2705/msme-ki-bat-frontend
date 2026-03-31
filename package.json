@@ -20,8 +20,8 @@
     "sequelize": "^6.37.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.2.2",
     "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4.2.2"
   }
 }

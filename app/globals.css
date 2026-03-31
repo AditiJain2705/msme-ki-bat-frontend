@@ -1,6 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 
-@font-face {
+@theme {
+  /* ── Colors ── */
+  --color-on-secondary-fixed: #563a00;
+  --color-outline-variant: #b8b29d;
+  --color-on-tertiary: #fff7f5;
+  --color-surface: #fff9eb;
+  --color-on-error: #fff7f7;
+  --color-tertiary-fixed: #ffa086;
+  --color-tertiary-container: #ffa086;
+  --color-secondary-container: #ffdead;
+  --color-surface-container-highest: #e9e2cc;
+  --color-surface-container-low: #f9f3e3;
+  --color-on-primary-fixed-variant: #323b94;
+  --color-primary-fixed: #b6bcff;
+  --color-primary-dim: #414aa3;
+  --color-tertiary-fixed-dim: #ff8b6a;
+  --color-on-secondary-container: #6e4b00;
+  --color-on-tertiary-fixed-variant: #7a1c00;
+  --color-inverse-surface: #100e07;
+  --color-error-dim: #770326;
+  --color-primary-fixed-dim: #a5adff;
+  --color-inverse-on-surface: #a19d90;
+  --color-on-primary-container: #29328b;
+  --color-inverse-primary: #929bfa;
+  --color-on-tertiary-container: #6b1800;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #635f4e;
+  --color-secondary: #7f5700;
+  --color-on-primary-fixed: #0f1876;
+  --color-secondary-fixed-dim: #ffcc7a;
+  --color-on-primary: #fbf8ff;
+  --color-tertiary: #b22e00;
+  --color-surface-variant: #e9e2cc;
+  --color-on-background: #363323;
+  --color-surface-container-high: #efe8d4;
+  --color-tertiary-dim: #9d2700;
+  --color-error-container: #f76a80;
+  --color-on-surface: #363323;
+  --color-surface-bright: #fff9eb;
+  --color-background: #fff9eb;
+  --color-error: #ac3149;
+  --color-outline: #7f7b68;
+  --color-on-tertiary-fixed: #440c00;
+  --color-primary-container: #b6bcff;
+  --color-surface-tint: #4d56b0;
+  --color-on-secondary-fixed-variant: #7b5400;
+  --color-surface-container: #f4eedb;
+  --color-secondary-fixed: #ffdead;
+  --color-surface-dim: #e1dac2;
+  --color-secondary-dim: #704c00;
+  --color-primary: #1a237e;
+  --color-on-error-container: #68001f;
+  --color-on-secondary: #fff8f2;
+
+  /* ── Fonts ── */
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+/* ── Base ── */
+@layer base {
+  body {
+    min-height: max(884px, 100dvh);
+    font-family: var(--font-body);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+  }
+
+  ::selection {
+    background-color: var(--color-secondary-container);
+    color: var(--color-on-secondary-container);
+  }
+}
+
+/* ── Utilities ── */
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .heritage-pattern-strip {
+    background-image: url("/new-home/pattern-strip-bg.png");
+    background-size: 80px;
+    opacity: 0.15;
+  }
+
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+}
+
+/* @font-face {
   font-family: "Citrus Gothic";
   src: url("/fonts/CitrusGothicSolid-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -40,12 +155,12 @@
 }
 
 /* Smooth Scroll Behavior */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* Prevent horizontal overflow */
-body {
+/* body {
   overflow-x: hidden;
 }
 .red-border {
@@ -167,4 +282,4 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
