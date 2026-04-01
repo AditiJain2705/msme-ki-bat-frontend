@@ -128,7 +128,6 @@
   }
 }
 
-/*
 @font-face {
   font-family: "Nave";
   src: url("/fonts/nave-regular.ttf") format("truetype");
@@ -161,12 +160,12 @@
 }
 
 /* Smooth Scroll Behavior */
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 /* Prevent horizontal overflow */
-/* body {
+body {
   overflow-x: hidden;
 }
 .red-border {
@@ -288,4 +287,4 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-} */
+}

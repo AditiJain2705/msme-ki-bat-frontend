@@ -7,6 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosShareAlt } from "react-icons/io";
+// Install: npm install swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const sections = [
     { id: "intro", title: "Introduction" },
@@ -17,51 +22,114 @@ const sections = [
     { id: "conclusion", title: "Conclusion" },
 ];
 
+const relatedBlogs = [
+    {
+        id: 1,
+        title: "India's first quantum and AI university campus to open in Amaravati",
+        excerpt: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!",
+    },
+    {
+        id: 2,
+        title: "India's first quantum and AI university campus to open in Amaravati",
+        excerpt: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!",
+    },
+    {
+        id: 3,
+        title: "India's first quantum and AI university campus to open in Amaravati",
+        excerpt: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!",
+    },
+];
+
+// Heart button component
+const HeartButton = ({ sectionId }) => {
+    const [liked, setLiked] = useState(false);
+
+    return (
+        <button
+            onClick={() => setLiked((prev) => !prev)}
+            aria-label={liked ? "Unlike" : "Like"}
+            className="transition-transform active:scale-125"
+        >
+            <Heart
+                className={`transition-colors duration-200 ${liked ? "fill-red-500 text-red-500" : "text-red-400"
+                    }`}
+            />
+        </button>
+    );
+};
+
+// Share button component
+const ShareButton = ({ title }) => {
+    const [copied, setCopied] = useState(false);
+
+    const handleShare = async () => {
+        const shareData = {
+            title: title || document.title,
+            url: window.location.href,
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                // User cancelled — do nothing
+            }
+        } else {
+            // Fallback: copy URL to clipboard
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+            } catch {
+                // Clipboard not available
+            }
+        }
+    };
+
+    return (
+        <button
+            onClick={handleShare}
+            aria-label="Share"
+            className="relative transition-transform active:scale-110"
+        >
+            <Share2 className="text-blue-600" />
+            {copied && (
+                <span className="absolute -top-8 right-0 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
+                    Link copied!
+                </span>
+            )}
+        </button>
+    );
+};
+
+const BLOG_TITLE = "India's first quantum and AI university campus to open in Amaravati";
+
 const Main = () => {
     const [active, setActive] = useState("intro");
     const tocRef = useRef(null);
 
-    // Scroll to section
     const scrollToSection = (id) => {
         const el = document.getElementById(id);
         if (!el) return;
-
-        const offset = 100; // adjust if header present
-        const top =
-            el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-        window.scrollTo({
-            top,
-            behavior: "smooth",
-        });
+        const offset = 100;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: "smooth" });
     };
 
-    // Intersection Observer for active section
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         setActive(entry.target.id);
-
-                        // auto scroll TOC in mobile
-                        const activeItem = document.getElementById(
-                            `toc-${entry.target.id}`
-                        );
+                        const activeItem = document.getElementById(`toc-${entry.target.id}`);
                         if (activeItem && tocRef.current) {
-                            activeItem.scrollIntoView({
-                                behavior: "smooth",
-                                inline: "center",
-                                block: "nearest",
-                            });
+                            activeItem.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
                         }
                     }
                 });
             },
-            {
-                rootMargin: "-40% 0px -50% 0px",
-                threshold: 0,
-            }
+            { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
         );
 
         sections.forEach((section) => {
@@ -75,21 +143,18 @@ const Main = () => {
     return (
         <main>
             {/* Hero */}
-            <section className="w-full blog-hero-section py-28">
-                <h1 className="text-4xl md:text-[53px] text-center uppercase md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto citrus-gothic">
-                    India's first quantum and AI university campus to open in Amaravati
+            <section className="w-full blog-hero-section py-20 md:py-28">
+                <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto font-headline">
+                    {BLOG_TITLE}
                 </h1>
             </section>
 
             {/* Layout */}
             <section className="flex flex-col md:flex-row gap-2 relative">
 
-                {/* ================== MOBILE TOC ================== */}
+                {/* MOBILE TOC */}
                 <div className="md:hidden sticky top-0 z-50 bg-white border-b border-gray-300">
-                    <div
-                        ref={tocRef}
-                        className="flex overflow-x-auto no-scrollbar gap-4 px-4 py-3"
-                    >
+                    <div ref={tocRef} className="flex overflow-x-auto no-scrollbar gap-4 px-4 py-3">
                         {sections.map((item) => (
                             <button
                                 key={item.id}
@@ -106,19 +171,17 @@ const Main = () => {
                     </div>
                 </div>
 
-                {/* ================== DESKTOP TOC ================== */}
-                <aside className="hidden md:block w-[30%] lg:w-1/4 pl-3 lg:px-6 mt-12 ">
-                    <div className="sticky top-12 mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h3 className="text-xl lg:text-2xl font-light mb-4 citrus-gothic">
-                            Table of Contents
-                        </h3>
+                {/* DESKTOP TOC */}
+                <aside className="hidden md:block w-[30%] lg:w-1/4 pl-3 lg:px-6 mt-12">
+                    <div className="sticky top-12 mb-12 bg-white p-6 rounded-lg pink-white-background">
+                        <h3 className="text-xl lg:text-2xl font-light mb-4 font-headline">Table of Contents</h3>
                         <ul className="space-y-2">
                             {sections.map((item) => (
                                 <li key={item.id}>
                                     <button
                                         id={`toc-${item.id}`}
                                         onClick={() => scrollToSection(item.id)}
-                                        className={`nave-font text-left transition-all ${active === item.id
+                                        className={`font-headline text-lg text-left transition-all ${active === item.id
                                             ? "text-[#02443A] font-semibold"
                                             : "text-gray-600"
                                             }`}
@@ -131,12 +194,11 @@ const Main = () => {
                     </div>
                 </aside>
 
-                {/* ================== BLOG CONTENT ================== */}
+                {/* BLOG CONTENT */}
                 <section className="w-full lg:w-1/2 nave-font px-6">
-                    <div
-                        id="intro"
-                        className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg  mt-6 md:mt-12 shadow-lg"
-                    >
+
+                    {/* Intro */}
+                    <div id="intro" className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg mt-6 md:mt-12 shadow-lg">
                         <p className="nave-font pb-4">
                             The National Institute of Electronics & Information Technology
                             signed a memorandum of understanding with the Government of Andhra
@@ -148,15 +210,14 @@ const Main = () => {
                             Naidu and MeitY Secretary S. Krishnan.
                         </p>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <Heart className="text-red-400" />
-                            <Share2 className="text-blue-600" />
+                            <HeartButton sectionId="intro" />
+                            <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
-                    <div
-                        id="part-of-a-larger-quantum-valley-vision"
-                        className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg  mt-12 shadow-lg"
-                    >
-                        <h2 className="citrus-gothic text-3xl text-[#02443A] font-medium mb-4">
+
+                    {/* Quantum Valley */}
+                    <div id="part-of-a-larger-quantum-valley-vision" className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
                             Part of a Larger Quantum Valley Vision
                         </h2>
                         <p className="nave-font pb-4">
@@ -171,34 +232,20 @@ const Main = () => {
                             tools, and a consortium to build a state-level AI tech hub.
                         </p>
                         <ul className="list-disc">
-                            <li className="mb-4">
-                                This partnership marks a major milestone in India's deep-tech
-                                journey," said Dr. M. M. Tripathi, NIELIT's Director General.
-                            </li>
-                            <li className="mb-4">
-                                The Amaravati Quantum & AI campus under NIELIT will emerge as a
-                                national centre.
-                            </li>
-                            <li className="mb-4">
-                                The Amaravati Quantum & AI campus of excellence for research,
-                                education, and innovation in quantum technologies and artificial
-                                intelligence.
-                            </li>
-                            <li className="mb-4">
-                                This partnership marks a major milestone in India's deep-tech
-                                journey," said Dr. M. M. Tripathi, NIELIT's Director General.
-                            </li>
+                            <li className="mb-4">This partnership marks a major milestone in India's deep-tech journey," said Dr. M. M. Tripathi, NIELIT's Director General.</li>
+                            <li className="mb-4">The Amaravati Quantum & AI campus under NIELIT will emerge as a national centre.</li>
+                            <li className="mb-4">The Amaravati Quantum & AI campus of excellence for research, education, and innovation in quantum technologies and artificial intelligence.</li>
+                            <li className="mb-4">This partnership marks a major milestone in India's deep-tech journey," said Dr. M. M. Tripathi, NIELIT's Director General.</li>
                         </ul>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <Heart className="text-red-400" />
-                            <Share2 className="text-blue-600" />
+                            <HeartButton sectionId="quantum" />
+                            <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
-                    <div
-                        id="conclusion"
-                        className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg  my-12 shadow-lg"
-                    >
-                        <h2 className="citrus-gothic text-3xl text-[#02443A] font-medium mb-4">
+
+                    {/* Conclusion */}
+                    <div id="conclusion" className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg my-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
                             Conclusion
                         </h2>
                         <p className="nave-font pb-4">
@@ -211,86 +258,63 @@ const Main = () => {
                             countries.
                         </p>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <Heart className="text-red-400" />
-                            <Share2 className="text-blue-600" />
+                            <HeartButton sectionId="conclusion" />
+                            <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
                 </section>
 
+                {/* DESKTOP RIGHT SIDEBAR */}
                 <aside className="hidden lg:block w-1/2 lg:w-1/4 nave-font py-12">
-                    {/* <div className=" h-auto bg-cover bg-no-repeat flex items-center flex-col justify-center py-20 lg:py-28" style={{ backgroundImage: "url(/home/related-blog-bg1.jpg)" }}>
-                        <h2 className=" text-base lg:text-2xl font-bold citrus-gothic mb-6 px-10 text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="lg:pl-12 pr-6 lg:text-base text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit obcaecati molestias illo vitae molestiae, quae unde sequi suscipit modi voluptatum possimus praesentium magni iste, amet perspiciatis totam!</p>
-                    </div> */}
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
+                    {relatedBlogs.map((blog) => (
+                        <div key={blog.id} className="mb-4 md:mb-12 bg-white p-6 rounded-lg pink-white-background">
+                            <h2 className="text-lg lg:text-2xl font-headline mb-4 text-center">{blog.title}</h2>
+                            <p>{blog.excerpt}</p>
+                            <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
+                                <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
+                                    Read More <IoIosShareAlt />
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
-                        </div>
-                    </div>
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
-                        </div>
-                    </div>
-
+                    ))}
                 </aside>
             </section>
-            <aside className=" lg:hidden w-full nave-font px-4">
-                <h2 className="text-2xl  citrus-gothic mb-4 text-[#02443A]  text-center">Related Blogs</h2>
-                {/* <div className=" h-auto bg-cover bg-no-repeat flex items-center flex-col justify-center py-20 lg:py-28" style={{ backgroundImage: "url(/home/related-blog-bg1.jpg)" }}>
-                        <h2 className=" text-base lg:text-2xl font-bold citrus-gothic mb-6 px-10 text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="lg:pl-12 pr-6 lg:text-base text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit obcaecati molestias illo vitae molestiae, quae unde sequi suscipit modi voluptatum possimus praesentium magni iste, amet perspiciatis totam!</p>
-                    </div> */}
-                <div className="grid md:grid-cols-3 gap-4">
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
-                        </div>
-                    </div>
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
-                        </div>
-                    </div>
-                    <div className=" mb-4 md:mb-12 bg-white p-6 rounded-lg  pink-white-background">
-                        <h2 className="text-lg lg:text-2xl  citrus-gothic mb-4  text-center">                    India's first quantum and AI university campus to open in Amaravati
-                        </h2>
-                        <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, libero! Ullam, odit!</p>
-                        <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                            <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                Read More <IoIosShareAlt /></Link>
-                        </div>
-                    </div>
-                </div>
 
+            {/* MOBILE RELATED BLOGS — Swiper Slider */}
+            <aside className="lg:hidden w-full nave-font px-6 pb-8">
+                <h2 className="text-3xl font-semibold font-headline mb-4 text-[#02443A] ">
+                    Related Blogs
+                </h2>
+
+                <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={16}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                    }}
+                    className="pb-10" // space for pagination dots
+                >
+                    {relatedBlogs.map((blog) => (
+                        <SwiperSlide key={blog.id}>
+                            <div className="mb-4 bg-white p-6 rounded-lg pink-white-background h-full">
+                                <h2 className="text-xl font-headline font-semibold mb-4 text-center">
+                                    {blog.title}
+                                </h2>
+                                <p className="text-xs">{blog.excerpt}</p>
+                                <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
+                                    <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
+                                        Read More <IoIosShareAlt />
+                                    </Link>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </aside>
+
             <FaqSection />
         </main>
     );

@@ -93,7 +93,7 @@ export default function TopAppBar() {
                                 {icon}
                             </span>
 
-                            <span className="font-sans text-xs font-bold uppercase tracking-wider">
+                            <span className="font-sans text-xs lg:text-base font-bold uppercase tracking-wider">
                                 {label}
                             </span>
                         </Link>
@@ -104,7 +104,7 @@ export default function TopAppBar() {
 
             {/* Menu Button */}
             <button
-                className="bg-secondary text-on-secondary text-sm font-semibold rounded transition-colors px-2 py-1 "
+                className="bg-secondary text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 "
                 onClick={() => setOpen(true)}
                 aria-label="Open menu"
             >

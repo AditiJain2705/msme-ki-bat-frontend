@@ -66,7 +66,7 @@ const FaqSection = () => {
     return (
         <section
             id="faqs"
-            className="relative min-h-auto faq-blue-background px-6 py-12 md:px-10 md:py-16 md:pb-[8rem]"
+            className="relative min-h-auto faq-blue-background px-6 py-12 md:px-10 md:py-16 pb-[8rem]"
         >
             <div className="absolute inset-0 -z-10">
                 <Image
@@ -82,7 +82,7 @@ const FaqSection = () => {
 
             <div className="relative z-20 mx-auto w-full max-w-4xl text-center">
                 {/* Title */}
-                <h2 className="mb-12 citrus-gothic  text-[48px] leading-[48px] uppercase text-white md:text-[84px] md:leading-[90px]">
+                <h2 className="mb-12 font-headline  text-4xl leading-[48px] uppercase text-white md:text-5xl md:leading-[90px]">
                     FAQ<span className="text-[#F5AACB]">s</span>
                 </h2>
 
@@ -95,9 +95,9 @@ const FaqSection = () => {
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="flex w-full items-center justify-between px-4 py-3 text-[16px] font-light uppercase leading-[28px] text-white md:text-[32px] md:leading-[40px]"
+                                className="flex w-full items-center justify-between px-4 py-3 text-[16px] font-light  leading-[28px] text-white md:text-3xl md:leading-[40px] font-headline"
                             >
-                                <span className="citrus-gothic ">
+                                <span className=" ">
                                     {faq.question}
                                 </span>
 
