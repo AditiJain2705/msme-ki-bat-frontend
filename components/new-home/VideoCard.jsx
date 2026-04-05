@@ -3,8 +3,9 @@
 import { RiVideoFill } from "react-icons/ri";
 
 export default function VideoCard({ youtubeId, duration, title }) {
+
     const thumbnail = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
-    const youtubeLink = `https://www.youtube.com/watch?v=${youtubeId}`;
+    const youtubeLink = `https://www.youtube.com/shorts/${youtubeId}`;
 
     return (
         <a
@@ -24,7 +25,7 @@ export default function VideoCard({ youtubeId, duration, title }) {
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
 
                 <div className="absolute bottom-3 left-3 flex items-center gap-1 text-white">
-                    <RiVideoFill className="rounded-full" />
+                    <RiVideoFill />
                     <span className="text-[10px] font-bold tracking-tighter">
                         {duration}
                     </span>

@@ -1,10 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
 import { IoPersonSharp } from "react-icons/io5";
 
-export default function NewsCardFeatured({ src, alt, tag, title, excerpt, author, readTime }) {
+export default function NewsCardFeatured({ src, alt, tag, title, excerpt, author, readTime, blogLink }) {
     return (
-        <div className="bg-surface-container-high rounded-xl overflow-hidden shadow-sm group border border-outline-variant/20 cursor-pointer">
+        <Link href={blogLink} className="bg-surface-container-high rounded-xl overflow-hidden shadow-sm group border border-outline-variant/20 cursor-pointer">
             <div className="relative h-48">
-                <img alt={alt} className="w-full h-full object-cover" src={src} />
+                <Image alt={alt} className="w-full h-full object-cover" src="/new-home/blog-default-image.webp" fill />
                 <div className="absolute top-4 left-4">
                     <span className="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] md:text-xs font-extrabold uppercase tracking-widest">
                         {tag}
@@ -29,6 +31,6 @@ export default function NewsCardFeatured({ src, alt, tag, title, excerpt, author
                     <span className="text-[11px] md:text-xs text-outline font-medium">{readTime}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

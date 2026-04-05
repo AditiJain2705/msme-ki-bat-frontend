@@ -3,60 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const faqs = [
-    {
-        question: (
-            <>
-                Episodes kitne{" "}
-                <span className="text-[#FFAF00]">time ke hote hain?</span>
-            </>
-        ),
-        answer:
-            "Mostly 3–8 minutes. Topic deep ho to special episodes longer ho sakte hain.",
-    },
-    {
-        question: (
-            <>
-                Kya yeh{" "}
-                <span className="text-[#FFAF00]">paid consulting hai?</span>
-            </>
-        ),
-        answer:
-            "Nahi. Yeh channel education + clarity ke liye hai. (Agar future mein paid services add hongi, clearly mention hongi.)",
-    },
-    {
-        question: (
-            <>
-                Kya aap schemes{" "}
-                <span className="text-[#FFAF00]">apply karwa dete ho?</span>
-            </>
-        ),
-        answer:
-            "Hum \"apply karwaane\" ka claim nahi karte. Hum aapko system samjhate hain aur funding-ready banne ke steps dete hain.",
-    },
-    {
-        question: (
-            <>
-                Kya yeh content{" "}
-                <span className="text-[#FFAF00]">beginners ke liye hai?</span>
-            </>
-        ),
-        answer:
-            "Haan — simple language, practical structure. Advanced viewers ko bhi frameworks milenge.",
-    },
-    {
-        question: (
-            <>
-                Topic suggest{" "}
-                <span className="text-[#FFAF00]">kaise karein?</span>
-            </>
-        ),
-        answer:
-            "Comment/WhatsApp/Form (jo bhi aap integrate karoge) — \"Topic + your business type + city/state\".",
-    },
-];
 
-const FaqSection = () => {
+
+const FaqSection = ({ faqs }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {
@@ -74,7 +23,7 @@ const FaqSection = () => {
                     alt="Background"
                     fill
                     priority
-                    className=""
+                    className="object-cover"
                 />
             </div>
             {/* Flower Pattern */}
@@ -95,7 +44,7 @@ const FaqSection = () => {
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="flex w-full items-center justify-between px-4 py-3 text-[16px] font-light  leading-[28px] text-white md:text-3xl md:leading-[40px] font-headline"
+                                className="flex w-full items-center justify-between px-4 py-3 text-lg font-light   text-white md:text-3xl md:leading-[40px] font-headline text-left"
                             >
                                 <span className=" ">
                                     {faq.question}

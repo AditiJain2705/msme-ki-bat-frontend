@@ -3,22 +3,17 @@ import VideoCard from "./VideoCard";
 export const VIDEOS = [
     {
         id: 1,
-        youtubeId: "ycO-a9Y7rRc",
+        youtubeId: "x_fsg3BeR5o",
         duration: "1:04",
-        title: "India’s Moment of Spiritual Awakening | GDP with spiritual master",
+        title: " आज पूरी दुनिया एक चीज़ ढूंढ रही है Trusted aur Resilient Manufacturers.",
     },
     {
         id: 2,
-        youtubeId: "Ox2Uq1VH9XU",
+        youtubeId: "aQ_9aVEkdys",
         duration: "0:58",
-        title: "PM Modi launches various development works in Vav-Tharad, Gujarat",
+        title: "भारत सरकार ने MSMEs के लिए पूरे देश में 100+ Technology Centres का network बनाया है, जिन पर हजारों करोड़ रुपये का investment किया गया है।",
     },
-    {
-        id: 3,
-        youtubeId: "17ddH2HBGCo",
-        duration: "1:20",
-        title: "PM Modi inaugurates the Kaynes Semicon Plant at Sanand, Gujarat",
-    },
+
 ];
 
 export default function QuickInsights() {
