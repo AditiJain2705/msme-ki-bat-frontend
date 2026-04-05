@@ -22,7 +22,7 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://www.msmekibaat.com/blog/msme-samadhaan-portal-45-day-payment-rule",
+      "https://www.msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule",
   },
 };
 

@@ -20,11 +20,11 @@ export const metadata = {
   robots: "index, follow",
 
   alternates: {
-    canonical: "https://msmekibaat.com/blog/msme-toll-free-number",
+    canonical: "https://msmekibaat.com/blogs/msme-toll-free-number",
     languages: {
-      "en-in": "https://msmekibaat.com/blog/msme-toll-free-number",
+      "en-in": "https://msmekibaat.com/blogs/msme-toll-free-number",
       "hi-in": "https://msmekibaat.com/hi/blog/msme-toll-free-number",
-      "x-default": "https://msmekibaat.com/blog/msme-toll-free-number",
+      "x-default": "https://msmekibaat.com/blogs/msme-toll-free-number",
     },
   },
 
@@ -34,7 +34,7 @@ export const metadata = {
       "MSME Toll Free Number 2026 | Official Helpline, Complaint & Support Guide",
     description:
       "Looking for the MSME toll free number? Get the official MSME helpline, grievance options, delayed payment help, and simple guidance for Indian businesses.",
-    url: "https://msmekibaat.com/blog/msme-toll-free-number",
+    url: "https://msmekibaat.com/blogs/msme-toll-free-number",
     siteName: "MSME Ki Baat",
     images: [
       {
@@ -108,7 +108,7 @@ const page = () => {
                 image:
                   "https://msmekibaat.com/images/blog/msme-toll-free-number.jpg",
                 mainEntityOfPage:
-                  "https://msmekibaat.com/blog/msme-toll-free-number",
+                  "https://msmekibaat.com/blogs/msme-toll-free-number",
               },
               {
                 "@type": "FAQPage",

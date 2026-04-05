@@ -10,6 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import RelatedBlogs from "@/components/new-home/RelatedBlogs";
+import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
 
 const sections = [
     { id: "intro", title: "Introduction" },
@@ -25,23 +27,6 @@ const sections = [
     { id: "conclusion", title: "Conclusion" },
 ];
 
-const relatedBlogs = [
-    {
-        id: 1,
-        title: "Udyam Registration: Your Gateway to MSME Benefits",
-        excerpt: "Learn the importance of Udyam registration and how it unlocks various government support systems.",
-    },
-    {
-        id: 2,
-        title: "Navigating the CHAMPIONS Portal for MSMEs",
-        excerpt: "A guide to using the CHAMPIONS portal for grievance resolution and business support.",
-    },
-    {
-        id: 3,
-        title: "MSME Samadhaan and ODR: Solving Delayed Payments",
-        excerpt: "Understand how the Samadhaan system and ODR portal help micro and small enterprises with payment disputes.",
-    },
-];
 
 // Heart button component
 const HeartButton = ({ sectionId }) => {
@@ -545,53 +530,13 @@ const Main = () => {
 
                 {/* DESKTOP RIGHT SIDEBAR */}
                 <aside className="hidden lg:block w-1/2 lg:w-1/4 nave-font py-12">
-                    {relatedBlogs.map((blog) => (
-                        <div key={blog.id} className="mb-4 md:mb-12 bg-white p-6 rounded-lg pink-white-background">
-                            <h2 className="text-lg lg:text-2xl font-headline mb-4 text-center">{blog.title}</h2>
-                            <p>{blog.excerpt}</p>
-                            <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                                <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                    Read More <IoIosShareAlt />
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
+                    <RelatedBlogs />
                 </aside>
             </section>
 
             {/* MOBILE RELATED BLOGS — Swiper Slider */}
             <aside className="lg:hidden w-full nave-font px-6 pb-8">
-                <h2 className="text-3xl font-semibold font-headline mb-4 text-[#02443A] ">
-                    Related Blogs
-                </h2>
-
-                <Swiper
-                    modules={[Pagination]}
-                    spaceBetween={16}
-                    slidesPerView={1}
-                    pagination={{ clickable: true }}
-                    breakpoints={{
-                        640: { slidesPerView: 2 },
-                        768: { slidesPerView: 3 },
-                    }}
-                    className="pb-10" // space for pagination dots
-                >
-                    {relatedBlogs.map((blog) => (
-                        <SwiperSlide key={blog.id}>
-                            <div className="mb-4 bg-white p-6 rounded-lg pink-white-background h-full">
-                                <h2 className="text-xl font-headline font-semibold mb-4 text-center">
-                                    {blog.title}
-                                </h2>
-                                <p className="text-xs">{blog.excerpt}</p>
-                                <div className="flex justify-end gap-4 mt-4 border-t-2 border-gray-300 w-full">
-                                    <Link href={"/"} className="p-1 px-2 gap-1 text-sm mt-4 rounded-sm bg-[#024067] text-white font-semibold flex items-center">
-                                        Read More <IoIosShareAlt />
-                                    </Link>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                <MobileRelatedBlogs />
             </aside>
 
             {/* Replaced FaqSection with the new faqs content */}

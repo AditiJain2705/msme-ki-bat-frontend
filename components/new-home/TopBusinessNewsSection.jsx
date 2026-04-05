@@ -30,12 +30,14 @@ const COMPACT_NEWS = [
         id: 2,
         src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBH2btzt13v8f2JVzQbyl-xUQlsWRIE-tjKkWh5UNmL9RcR2uzdn5w6TWibRfhVcGLKz-b20Ndi_lnnvamPDTzI7s3pk-l6RXmbFX_tonnOZkEiuFe5z0bAi8FC0YAs6_XERSMRv_tPgTOtStHQC7rXX67tww2_seMqT80riJz7qjeIwLq4kk4Z6IywlKXH-P6cU6wM6aZZOm7XipmvMPaNwk_OLxA0WNCvXKYugmvgoHlhJK_Xl0AvvXEzfLD_hQIK7rvndqHp2F1N",
         alt: "msme news",
-        tag: "Marketing",
+        tag: "GeM Registration 2026",
         tagColor: "secondary",
-        title: "New SEBI Guidelines for Fintech Startups Detailed",
+        title: "GeM Registration 2026 | Process, Fees, Eligibility & Seller Guide",
         excerpt:
-            "The updated framework aims to increase transparency in algorithmic trading modules used by retail investors.",
+            "Learn GeM registration process step by step. Check eligibility, fees, documents required and how to start selling on Government e-Marketplace.",
         hasBorder: true,
+        blogLink: "/blogs/gem-registration"
+
     },
 
 ];
