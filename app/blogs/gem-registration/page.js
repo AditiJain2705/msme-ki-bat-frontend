@@ -22,7 +22,7 @@ export const metadata = {
     canonical: "https://msmekibaat.com/blogs/gem-registration",
     languages: {
       "en-in": "https://msmekibaat.com/blogs/gem-registration",
-      "x-default": "https://msmekibaat.com/blogs/gem-registration",
+      // Removed x-default as per PDF
     },
   },
 
@@ -47,6 +47,8 @@ export const metadata = {
       "Learn GeM registration process step by step. Check eligibility, fees, documents required and how to start selling on Government e-Marketplace.",
     images: ["https://msmekibaat.com/images/blog/gem-registration.jpg"],
   },
+  // Added Meta Author Tag as per PDF
+  author: "Hemant Chutani",
 };
 
 const page = () => {
@@ -68,7 +70,8 @@ const page = () => {
                 url: "https://msmekibaat.com/",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://msmekibaat.com/logo.png",
+                  // Updated logo URL as per PDF
+                  url: "https://msmekibaat.com/new-home/msme-ki-bat-logo.webp",
                 },
                 sameAs: ["https://youtube.com/@msmekibaat"],
               },
@@ -198,6 +201,34 @@ const page = () => {
                       "@type": "Answer",
                       text:
                         "Yes, MSMEs and small businesses can register and may get preference advantages.",
+                    },
+                  },
+                  // Added 3 Missing FAQs as per PDF
+                  {
+                    "@type": "Question",
+                    name: "How long does GeM registration take?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "GeM registration itself can be completed in a few hours if all documents are ready. Activation and catalog approval may take additional time depending on the category.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Do I need GST for GeM?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "GST details are required during GeM registration if applicable to your business. Check your category requirements before applying as some categories may not require GST.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can MSME Ki Baat help me understand GeM better?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "Yes. MSME Ki Baat helps business owners understand whether GeM is right for them, what category to enter, what mistakes to avoid, and how to approach it practically rather than just registering and doing nothing.",
                     },
                   },
                 ],

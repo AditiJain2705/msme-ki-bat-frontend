@@ -366,7 +366,7 @@ const Main = () => {
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
                             GeM Registration Process (Step by Step)
                         </h2>
-                        <ol className="list-decimal list-inside space-y-4 nave-font">
+                        <ol className=" space-y-4 nave-font">
                             <li>
                                 <h3 className="font-semibold text-lg">Step 1: Go to the GeM portal</h3>
                                 <p>Visit the official GeM website and click on Seller Registration.</p>
@@ -429,7 +429,7 @@ const Main = () => {
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
                             Common Mistakes MSMEs Make
                         </h2>
-                        <ol className="list-decimal list-inside space-y-4 nave-font">
+                        <ol className=" space-y-4 nave-font">
                             <li>
                                 <h3 className="font-semibold text-lg">Wrong product listing</h3>
                                 <p>Poor titles, weak descriptions, and bad categorization reduce visibility.</p>

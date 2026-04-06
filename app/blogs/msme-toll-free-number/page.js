@@ -21,10 +21,9 @@ export const metadata = {
 
   alternates: {
     canonical: "https://msmekibaat.com/blogs/msme-toll-free-number",
+    // Removed hi-in and x-default as per instructions
     languages: {
       "en-in": "https://msmekibaat.com/blogs/msme-toll-free-number",
-      "hi-in": "https://msmekibaat.com/hi/blog/msme-toll-free-number",
-      "x-default": "https://msmekibaat.com/blogs/msme-toll-free-number",
     },
   },
 
@@ -38,7 +37,7 @@ export const metadata = {
     siteName: "MSME Ki Baat",
     images: [
       {
-        url: "https://msmekibaat.com/new-home/blog-default-image.webp",
+        url: "https://msmekibaat.com/new-home/blog-default-image.webp", // Keep generic for now, update when ready
       },
     ],
   },
@@ -49,8 +48,10 @@ export const metadata = {
       "MSME Toll Free Number 2026 | Official Helpline, Complaint & Support Guide",
     description:
       "Get the official MSME helpline, grievance options, delayed payment help, and simple guidance for Indian businesses.",
-    images: ["https://msmekibaat.com/new-home/blog-default-image.webp"],
+    images: ["https://msmekibaat.com/new-home/blog-default-image.webp"], // Keep generic for now, update when ready
   },
+  // Added Meta Author Tag as per PDF
+  author: "Hemant Chutani",
 };
 
 const page = () => {
@@ -73,7 +74,7 @@ const page = () => {
                 url: "https://msmekibaat.com/",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://msmekibaat.com/msme-ki-bat-logo.webp",
+                  url: "https://msmekibaat.com/new-home/msme-ki-bat-logo.webp", // Updated image URL
                 },
                 sameAs: ["https://youtube.com/@msmekibaat"],
               },
@@ -103,12 +104,36 @@ const page = () => {
                 publisher: {
                   "@id": "https://msmekibaat.com/#organization",
                 },
-                datePublished: "2026-04-05",
-                dateModified: "2026-04-05",
+                datePublished: "2026-04-05", // From PDF
+                dateModified: "2026-04-05", // From PDF
                 image:
-                  "https://msmekibaat.com/images/blog/msme-toll-free-number.jpg",
+                  "https://msmekibaat.com/images/blog/msme-toll-free-number.jpg", // Update when image is ready
                 mainEntityOfPage:
                   "https://msmekibaat.com/blogs/msme-toll-free-number",
+              },
+              // Added BreadcrumbList Schema as per PDF
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://msmekibaat.com/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Blog",
+                    item: "https://msmekibaat.com/blogs/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "MSME Toll Free Number",
+                    item: "https://msmekibaat.com/blogs/msme-toll-free-number",
+                  },
+                ],
               },
               {
                 "@type": "FAQPage",
@@ -138,6 +163,36 @@ const page = () => {
                       "@type": "Answer",
                       text:
                         "Delayed-payment cases are routed through the MSME ODR process linked with Samadhaan.",
+                    },
+                  },
+                  // Added 3 Missing FAQs as per PDF
+                  {
+                    "@type": "Question",
+                    name: "What is the CHAMPIONS portal used for?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "The CHAMPIONS portal is used for MSME support, grievance handling, and one-stop problem resolution assistance for Indian businesses.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name:
+                      "What should I keep ready before asking for MSME support?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "Keep your Udyam registration number, business name, mobile number, email, invoice or payment details if payment is stuck, buyer or department details, a short written summary of the problem, and any screenshots or complaint references ready.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name:
+                      "Can MSME Ki Baat help me understand the right support route?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text:
+                        "Yes. MSME Ki Baat helps simplify MSME processes and explains the right next step for business owners confused about which support channel to use.",
                     },
                   },
                 ],

@@ -90,7 +90,7 @@ const ShareButton = ({ title }) => {
     );
 };
 
-const BLOG_TITLE = "The MSME Samadhaan Portal: Your Solution for Delayed Payments";
+const BLOG_TITLE = "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast";
 
 const faqs = [
     {
