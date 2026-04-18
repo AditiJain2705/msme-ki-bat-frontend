@@ -1,13 +1,9 @@
 "use client";
 
 import FaqSection from "@/components/home/FaqSection";
-import WhoShouldApply from "@/components/home/WhoShouldApply"; // This component is not used in the new content, consider removing if not needed elsewhere.
 import { Heart, Share2 } from "lucide-react";
-import Image from "next/image"; // This component is not used in the new content, consider removing if not needed elsewhere.
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { IoIosShareAlt } from "react-icons/io";
-// Install: npm install swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -17,19 +13,23 @@ import RelatedBlogs from "@/components/new-home/RelatedBlogs";
 
 const sections = [
     { id: "intro", title: "Introduction" },
-    { id: "what-is-msme-samadhaan-portal", title: "What Is the MSME Samadhaan Portal?" },
-    { id: "45-day-msme-payment-rule", title: "The 45-Day MSME Payment Rule" },
-    { id: "section-43bh-changes-everything", title: "Section 43B(h) – Why This Changes Everything" },
-    { id: "who-can-use-msme-samadhaan-portal", title: "Who Can Actually Use the MSME Samadhaan Portal?" },
-    { id: "what-this-gives-you-as-an-msme", title: "What Does This Actually Give You as an MSME?" },
-    { id: "how-to-file-complaint", title: "How to File a Complaint on MSME Samadhaan" },
-    { id: "how-to-check-case-status", title: "How to Check Your MSME Samadhaan Case Status" },
-    { id: "note-for-buyers", title: "A Note If You're a Buyer Working with MSMEs" },
+    { id: "why-delay-is-serious", title: "Why Delayed Payments Hurt MSMEs?" },
+    { id: "what-is-msme-samadhaan-portal", title: "What is MSME Samadhaan Portal?" },
+    { id: "45-days-payment-rule", title: "45 Days Payment Rule" },
+    { id: "what-happens-on-delay", title: "What Happens on Delay?" },
+    { id: "when-to-use-msme-samadhaan", title: "When to Use MSME Samadhaan?" },
+    { id: "how-to-file-complaint", title: "How to File a Complaint?" },
+    { id: "how-to-login", title: "MSME Samadhaan Login" },
+    { id: "case-status", title: "Case Status Verification" },
+    { id: "common-mistakes", title: "Common Mistakes" },
+    { id: "reality", title: "The Reality Check" },
+    { id: "practical-approach", title: "Practical Approach" },
+    { id: "msme-ki-baat-help", title: "How We Help" },
+    { id: "official-references", title: "Official References" },
 ];
 
-
 // Heart button component
-const HeartButton = ({ sectionId }) => {
+const HeartButton = () => {
     const [liked, setLiked] = useState(false);
 
     return (
@@ -90,65 +90,34 @@ const ShareButton = ({ title }) => {
     );
 };
 
-const BLOG_TITLE = "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast";
+const BLOG_TITLE = "MSME Samadhaan Portal & 45 Days Payment Rule: Simple Guide for Business Owners";
 
 const faqs = [
     {
-        question: (
-            <>
-                Can I file on MSME Samadhaan without{" "}
-                <span className="text-[#FFAF00]">Udyam registration?</span>
-            </>
-        ),
-        answer: "No. You must have Udyam registration to file a complaint on the MSME Samadhaan portal. Without it, the portal will not accept your complaint.",
+        question: "MSME Samadhaan kya hai?",
+        answer: "Ye delayed payment disputes ko support karne wala government mechanism/platform ecosystem hai. Simple terms mein, this explains how MSME Samadhaan works for delayed-payment cases.",
     },
     {
-        question: (
-            <>
-                How does MSME Samadhaan work – is it{" "}
-                <span className="text-[#FFAF00]">litigation?</span>
-            </>
-        ),
-        answer: "It's a facilitated dispute resolution process. While backed by law, it aims for resolution through the MSME Facilitation Council (MSEFC) rather than traditional court litigation, offering a faster and more transparent process.",
+        question: "45 days rule kya hai?",
+        answer: "Buyer ko written agreement ke case mein maximum 45 din ke andar payment karna hota hai. Without agreement, due timeline aur bhi shorter ho sakti hai.",
     },
     {
-        question: (
-            <>
-                How much interest can I charge on{" "}
-                <span className="text-[#FFAF00]">delayed payments?</span>
-            </>
-        ),
-        answer: "If payment is delayed beyond the limit (45 days with agreement, 15 days without), you can charge 3x the RBI bank rate, compounded monthly. This interest is a statutory right and cannot be waived.",
+        question: "Case status kaise check karein?",
+        answer: "Portal pe login karke track kar sakte ho. Simple terms mein, yehi MSME Samadhaan case status tracking process hai.",
     },
     {
-        question: (
-            <>
-                Does Section 43B(h) apply to all{" "}
-                <span className="text-[#FFAF00]">buyers, even small ones?</span>
-            </>
-        ),
-        answer: "Section 43B(h) impacts buyers who delay MSME payments beyond 45 days, leading to loss of tax deduction for the unpaid amount. It applies to any buyer dealing with MSME vendors, regardless of the buyer's size.",
+        question: "Kya Udyam registration zaroori hai?",
+        answer: "Valid Udyam Registration practical aur official eligibility context mein important hai; current eligibility/process official portal par verify karna chahiye.",
     },
     {
-        question: (
-            <>
-                How to login to{" "}
-                <span className="text-[#FFAF00]">MSME Samadhaan?</span>
-            </>
-        ),
-        answer: "You can log in to the MSME Samadhaan portal using your Udyam Registration Number and verify your identity via an OTP sent to your Aadhaar-linked mobile number.",
+        question: "Is MSME Samadhaan litigation?",
+        answer: "Not exactly in the usual court-case sense. It is a statutory delayed-payment dispute mechanism that may move through the facilitation council process, so users should understand it as a formal legal remedy rather than casual complaint support.",
     },
     {
-        question: (
-            <>
-                Do I need a lawyer to{" "}
-                <span className="text-[#FFAF00]">file a complaint?</span>
-            </>
-        ),
-        answer: "No, the process on the MSME Samadhaan portal is designed to be straightforward and can be completed by the business owner themselves without the need for a lawyer. The system is online, transparent, and backed by law.",
+        question: "How to file MSME Samadhaan complaint?",
+        answer: "Check the latest official filing route first, keep buyer details, invoice, pending amount, delivery proof, and agreement or purchase order ready, then proceed through the relevant official portal flow.",
     },
 ];
-
 
 const Main = () => {
     const [active, setActive] = useState("intro");
@@ -190,9 +159,17 @@ const Main = () => {
         <main>
             {/* Hero */}
             <section className="w-full blog-hero-section py-20 md:py-28">
-                <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto font-headline px-2">
+                <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] text-[#02443A] max-w-5xl mx-auto font-headline px-2">
                     {BLOG_TITLE}
                 </h1>
+                <p className="text-center text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-4">
+                    Understand delayed payment complaints, 45 days payment rule, case status, login, and what to do next if your payment is stuck.
+                </p>
+                <div className="flex justify-center mt-8">
+                    <Link href="#msme-ki-baat-help" className="bg-[#02443A] text-white px-6 py-3 rounded-full font-medium hover:bg-[#013028] transition-colors">
+                        Get Guided Support from MSME Ki Baat
+                    </Link>
+                </div>
             </section>
 
             {/* Layout */}
@@ -243,311 +220,240 @@ const Main = () => {
                 {/* BLOG CONTENT */}
                 <section className="w-full lg:w-1/2 nave-font px-6">
 
-                    {/* Intro */}
+                    {/* Section 2: Problem Intro Block */}
                     <div id="intro" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-6 md:mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            “Payment kab milega?” - sabse badi problem
+                        </h2>
                         <p className="nave-font pb-4">
-                            If you run a small business in India, you already know this frustration. You complete the work, raise the invoice, follow up once, follow up again — and somehow the payment still doesn't come. Weeks pass. Sometimes months. And while you're waiting, your rent, salaries, and vendor payments don't wait with you.
+                            Aapne kaam complete kar diya. Material deliver ho gaya. Service finish ho gayi. Invoice bhi bhej diya. Ab bas ek cheez baaki hai - payment. Aur woh aa nahi raha.
                         </p>
                         <p className="nave-font pb-4">
-                            The good news is that the government actually has a system to deal with exactly this problem. Most small business owners just don't know it exists — or don't know how to use it. That's what this blog is about.
+                            Kabhi 20 din, kabhi 2 mahine. Aur jab follow up karo toh answer milta hai: “process mein hai”. Agar aap business chala rahe ho, toh aapko pata hai - ye problem chhoti nahi hoti.
                         </p>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="intro" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* What Is the MSME Samadhaan Portal? */}
+                    {/* Section 3: Why It Matters */}
+                    <div id="why-delay-is-serious" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            MSMEs ke liye delay itna serious kyun hai?
+                        </h2>
+                        <p className="nave-font pb-4">
+                            Badi companies ke paas reserves hote hain. Lekin MSMEs? Unka business chalata hai regular cash flow pe. Agar payment delay ho jaye, salary ruk sakti hai, raw material ruk sakta hai, aur business growth slow ho jaati hai.
+                        </p>
+                        <p className="nave-font pb-4">
+                            Isi problem ko solve karne ke liye government ne ek system introduce kiya: MSME Samadhaan ecosystem, jo delayed payment disputes ko track aur resolve karne ke framework ka part hai. Search terms jaise <span className="font-semibold">MSME Samadhaan portal</span>, <span className="font-semibold">MSME Samadhaan delayed payment monitoring system</span>, aur <span className="font-semibold">delayed payment monitoring system</span> isi issue se linked hote hain.
+                        </p>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 4: What is MSME Samadhaan? */}
                     <div id="what-is-msme-samadhaan-portal" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            What Is the MSME Samadhaan Portal?
+                            MSME Samadhaan Portal kya hai? (simple samjho)
                         </h2>
                         <p className="nave-font pb-4">
-                            Think of the MSME Samadhaan portal as your online complaint window against buyers who haven't paid you on time. It was launched by the Ministry of MSME specifically so that registered small businesses – Micro and Small Enterprises – don't have to chase clients endlessly or spend money on lawyers just to get what they're owed.
+                            MSME Samadhaan ek government platform hai jo delayed payments ke cases ke liye bana hai. Yahan supplier MSE unit apna dispute raise kar sakti hai aur matter MSE Facilitation Council tak ja sakta hai. Official portal ke hisaab se ye Delayed Payment Monitoring System framework ka part hai. Isi wajah se log isse <span className="font-semibold">MSME Samadhaan portal</span> bhi search karte hain.
                         </p>
-                        <p className="nave-font pb-4">
-                            Before this existed, your options were limited. You could keep following up, hire a lawyer and drag the matter to court, or just write it off and move on. None of those options were great. The Samadhaan portal changed that. The whole process is online, transparent, and backed by law. You file your complaint, upload your documents, and the system takes it from there.
-                        </p>
-                        <div className="bg-gray-100 p-4 rounded-md my-4">
-                            <p className="font-semibold  gap-2">
-                                <span>🔗</span> Official Portal: <Link href="https://samadhaan.dcmsme.gov.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">samadhaan.dcmsme.gov.in</Link> – File complaints, track cases, and get resolution through the MSME Facilitation Council (MSEFC). No middlemen. No office visits.
-                            </p>
-                        </div>
-                        <h3 className="font-headline text-2xl md:text-3xl text-[#02443A] font-semibold mb-4">
-                            What Can You Do on the MSME Samadhaan Portal?
-                        </h3>
-                        <ul className="list-disc ml-5 space-y-2 pb-4">
-                            <li>File a delayed payment case against a buyer – completely online</li>
-                            <li>Upload your invoices and supporting documents</li>
-                            <li>Track your MSME Samadhaan case status in real time</li>
-                            <li>Get your case forwarded to the MSE Facilitation Council for legal resolution</li>
-                        </ul>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="what-is-msme-samadhaan-portal" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* The 45-Day MSME Payment Rule – What Does It Actually Say? */}
-                    <div id="45-day-msme-payment-rule" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                    {/* Section 5: 45 Days Rule */}
+                    <div id="45-days-payment-rule" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            The 45-Day MSME Payment Rule – What Does It Actually Say?
+                            45 days payment rule kya kehta hai? (MSME 45 days payment rule simple samjho)
                         </h2>
                         <p className="nave-font pb-4">
-                            A lot of people have heard of this rule but aren't sure exactly what it covers. Here's the simple version: under the <span className="font-semibold">MSMED Act, 2006</span>, buyers are legally required to pay MSMEs within a fixed time window. There's no wiggle room — the law sets a hard deadline.
+                            Law ke according, agar written agreement nahi hai toh payment appointed day ke basis par 15 din ke andar due hota hai. Agar agreement hai, toh maximum 45 din tak hi payment period ja sakta hai. Isse zyada delay allowed nahi hai.
                         </p>
-                        <div className="overflow-x-auto my-6">
-                            <table className="min-w-full bg-white border border-gray-200">
-                                <thead>
-                                    <tr className="bg-[#02443A] text-white">
-                                        <th className="py-3 px-4 text-left font-semibold">MSME PAYMENT TIMELINE – WHAT THE LAW SAYS</th>
-                                        <th className="py-3 px-4 text-left font-semibold"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="py-3 px-4 border-b border-gray-200">Written agreement exists</td>
-                                        <td className="py-3 px-4 border-b border-gray-200">Payment within <span className="font-semibold">45 days</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 px-4 border-b border-gray-200">No written agreement</td>
-                                        <td className="py-3 px-4 border-b border-gray-200">Payment within <span className="font-semibold">15 days</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 px-4">If payment is delayed beyond limit</td>
-                                        <td className="py-3 px-4"><span className="font-semibold">3x RBI bank rate</span> — compound interest applies</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                         <p className="nave-font pb-4">
-                            The <span className="font-semibold">MSME late payment interest rate</span> kicks in at three times the RBI bank rate, compounded monthly. And here's the important part – neither the buyer nor you can waive this interest. Once the payment deadline passes, it becomes a statutory right. The buyer has to pay it, whether they like it or not.
+                            Agar buyer 45 din ke baad bhi payment nahi karta, toh delay ka issue serious ho jata hai aur interest liability trigger ho sakti hai.
                         </p>
-                        <div className="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 p-4 mb-4" role="alert">
-                            <div className="flex items-center">
-                                <span className="text-xl mr-2">💡</span>
-                                <p className="font-semibold">Worth knowing:</p>
-                            </div>
-                            <p>Even if a buyer comes back to you and says "let's settle without the interest," you are not legally required to agree. The compound interest under the MSME payment rule is your right under the law – it cannot be negotiated away once the 45-day window has passed.</p>
-                        </div>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="45-day-msme-payment-rule" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* Section 43B(h) – Why This Changes Everything for MSMEs */}
-                    <div id="section-43bh-changes-everything" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                    {/* Section 6: What Happens on Delay */}
+                    <div id="what-happens-on-delay" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            Section 43B(h) – Why This Changes Everything for MSMEs
+                            Delay hone par kya hota hai?
                         </h2>
                         <p className="nave-font pb-4">
-                            For years, small businesses struggled to get big companies to pay on time because there wasn't enough pain on the buyer's side. Yes, there was interest. But for a large company, paying some extra interest was often cheaper than reorganising their cash flow. So delays continued.
-                        </p>
-                        <p className="nave-font pb-4">
-                            From <span className="font-semibold">April 1, 2024</span>, that changed. A new amendment – <span className="font-semibold">Section 43B(h)</span> of the Income Tax Act — introduced a direct tax consequence for buyers who delay MSME payments beyond 45 days. If a buyer doesn't pay within the deadline, they <span className="font-semibold">cannot claim that payment as a business expense deduction</span> in their tax returns for that financial year. The unpaid amount stays on their books as taxable income.
-                        </p>
-                        <div className="overflow-x-auto my-6">
-                            <table className="min-w-full bg-white border border-gray-200">
-                                <thead>
-                                    <tr className="bg-[#02443A] text-white">
-                                        <th className="py-3 px-4 text-left font-semibold" colSpan="2">SECTION 43B(H) — IMPACT ON BUYERS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="py-3 px-4 border-b border-gray-200">Payment made within 45 days</td>
-                                        <td className="py-3 px-4 border-b border-gray-200">✓ Full tax deduction allowed</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 px-4 border-b border-gray-200">Payment made after 45 days</td>
-                                        <td className="py-3 px-4 border-b border-gray-200">× No deduction that FY — higher taxable income</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 px-4">Net effect on buyer</td>
-                                        <td className="py-3 px-4">More tax outflow + compound interest liability</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p className="nave-font pb-4">
-                            In simple terms – delay the payment, pay more tax. For large companies that deal with hundreds of MSME vendors, this adds up very quickly. It's the kind of financial consequence that actually gets boardroom attention, which is exactly what the government intended.
+                            Agar payment delay hota hai, buyer ko compound interest dena pad sakta hai. Official provisions ke mutabik yeh interest RBI bank rate ke three times ke basis par apply hota hai. Isi ko kaafi log <span className="font-semibold">MSME late payment interest rate</span> ya <span className="font-semibold">MSME payment rule</span> ke context mein samajhna chahte hain. Yeh sirf request nahi hai - yeh legal protection hai MSEs ke liye.
                         </p>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="section-43bh-changes-everything" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* Who Can Actually Use the MSME Samadhaan Portal? */}
-                    <div id="who-can-use-msme-samadhaan-portal" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                    {/* Additional Sub-Section: When to use MSME Samadhaan */}
+                    <div id="when-to-use-msme-samadhaan" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            Who Can Actually Use the MSME Samadhaan Portal?
+                            Kab MSME Samadhaan use karna chahiye?
                         </h2>
                         <p className="nave-font pb-4">
-                            Before you file anything, it's worth checking whether you qualify. The eligibility is straightforward, but there's one thing that catches a lot of people — you must have <span className="font-semibold">Udyam Registration</span>. Without it, the portal simply won't accept your complaint.
+                            Har chhoti delay pe case file karna zaroori nahi hota. Lekin agar 45 din cross ho chuke hain, buyer response nahi de raha, aur payment significant amount hai, tab aapko action lena chahiye.
                         </p>
-
-                        <div className="border border-gray-200 rounded-md my-4">
-                            <div className="p-4 border-b border-gray-200 flex items-start">
-                                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                                <div>
-                                    <h3 className="font-semibold">Micro & Small Enterprises with Udyam Registration</h3>
-                                    <p className="text-gray-700 text-sm">You must be registered on the Udyam portal. Without Udyam registration, MSME Samadhaan will not accept your complaint.</p>
-                                </div>
-                            </div>
-                            <div className="p-4 border-b border-gray-200 flex items-start">
-                                <span className="text-red-600 font-bold text-xl mr-2">×</span>
-                                <div>
-                                    <h3 className="font-semibold">Traders registered only for priority lending benefits</h3>
-                                    <p className="text-gray-700 text-sm">If your Udyam registration was done only for lending benefits and you're classified as a trader, you may not qualify for payment protection.</p>
-                                </div>
-                            </div>
-                            <div className="p-4 flex items-start">
-                                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                                <div>
-                                    <h3 className="font-semibold">Companies, LLPs, Partnerships, Proprietors — no size limit</h3>
-                                    <p className="text-gray-700 text-sm">Even large corporations are covered under the MSME payment rule. There is no minimum size threshold on the buyer's side.</p>
-                                </div>
-                            </div>
-                        </div>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="who-can-use-msme-samadhaan-portal" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* What Does This Actually Give You as an MSME? */}
-                    <div id="what-this-gives-you-as-an-msme" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
-                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            What Does This Actually Give You as an MSME?
-                        </h2>
-                        <p className="nave-font pb-4">
-                            Beyond the legal framework, here's what these protections mean practically for your day-to-day business:
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                            <div className=" p-6  pink-white-background ">
-                                <div className="flex items-center mb-3">
-                                    <span className="text-3xl mr-3">💰</span>
-                                    <h3 className="font-semibold text-xl">Better Cash Flow</h3>
-                                </div>
-                                <p>Stop the endless waiting cycle. The 45-day rule gives your business a predictable payment timeline — and legal teeth when buyers ignore it.</p>
-                            </div>
-                            <div className=" p-6  pink-white-background ">
-                                <div className="flex items-center mb-3">
-                                    <span className="text-3xl mr-3">⚖️</span>
-                                    <h3 className="font-semibold text-xl">Full Legal Backing</h3>
-                                </div>
-                                <p>You're protected under the MSMED Act. Cases resolved by MSEFC are legally enforceable – like a civil court decree.</p>
-                            </div>
-                            <div className=" p-6  pink-white-background ">
-                                <div className="flex items-center mb-3">
-                                    <span className="text-3xl mr-3">📊</span>
-                                    <h3 className="font-semibold text-xl">Complete Transparency</h3>
-                                </div>
-                                <p>Track every step of your complaint via the MSME Samadhaan case status dashboard. No black boxes, no confusion.</p>
-                            </div>
-                            <div className=" p-6  pink-white-background ">
-                                <div className="flex items-center mb-3">
-                                    <span className="text-3xl mr-3">🚀</span>
-                                    <h3 className="font-semibold text-xl">Faster Resolution</h3>
-                                </div>
-                                <p>Cases go to MSEFC and are typically resolved within 90 days — far faster than traditional civil courts.</p>
-                            </div>
-                        </div>
-                        <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="what-this-gives-you-as-an-msme" />
-                            <ShareButton title={BLOG_TITLE} />
-                        </div>
-                    </div>
-
-                    {/* How to File a Complaint on MSME Samadhaan */}
+                    {/* Section 7: Complaint Process */}
                     <div id="how-to-file-complaint" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            How to File a Complaint on MSME Samadhaan
+                            MSME Samadhaan pe complaint kaise file hoti hai? (how to file MSME Samadhaan)
                         </h2>
-                        <p className="nave-font pb-4">
-                            Most business owners expect a government portal to be complicated and time-consuming. This one genuinely isn't. The entire process takes about 15-20 minutes if you have your documents ready. Here's what you do:
+                        <p className="nave-font pb-4 bg-yellow-50 p-4 border-l-4 border-yellow-500 rounded-md my-4 shadow-sm text-yellow-900">
+                            <strong>Current Note:</strong> Official MSME Samadhaan homepage ab mention karta hai ki new delayed payment applications MSME ODR Portal ke through file ki ja rahi hain. Isliye filing start karne se pehle official portal par latest process verify karna chahiye.
                         </p>
-                        <ol className="list-inside space-y-4 nave-font">
-                            <li>
-                                <h3 className="font-semibold text-lg">1. Go to the MSME Samadhaan Portal</h3>
-                                <p>Visit <Link href="https://samadhaan.dcmsme.gov.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">samadhaan.dcmsme.gov.in</Link> on any browser.</p>
-                            </li>
-                            <li>
-                                <h3 className="font-semibold text-lg">2. Enter Your Udyam Registration Number</h3>
-                                <p>This is your unique ID from the Udyam portal. Mandatory - you cannot proceed without it.</p>
-                            </li>
-                            <li>
-                                <h3 className="font-semibold text-lg">3. Verify via OTP</h3>
-                                <p>An OTP is sent to your Aadhaar-linked mobile number for identity verification.</p>
-                            </li>
-                            <li>
-                                <h3 className="font-semibold text-lg">4. Add Buyer Details + Invoice Information</h3>
-                                <p>Enter details of the company that owes you money - name, invoice date, amount, and due date.</p>
-                            </li>
-                            <li>
-                                <h3 className="font-semibold text-lg">5. Upload Your Documents</h3>
-                                <p>Attach the original invoice(s), any written agreement, and proof of delivery of goods or services.</p>
-                            </li>
-                            <li>
-                                <h3 className="font-semibold text-lg">6. Submit Your Case</h3>
-                                <p>Once submitted, your case is automatically forwarded to the relevant MSME Facilitation Council (MSEFC) for action.</p>
-                            </li>
-                        </ol>
+                        <p className="nave-font pb-4">
+                            Practical flow simple hai: official portal par jao, MSME Samadhaan login ya relevant filing route samjho, buyer details, invoice details, pending amount aur supporting documents ready rakho.
+                        </p>
+                        <p className="nave-font pb-4">
+                            Usually invoice, delivery proof, aur agreement ya purchase order jaise records useful hote hain. Isse MSME Samadhaan complaint file karne ki preparation strong hoti hai. Yeh matter aage MSE Facilitation Council ke paas ja sakta hai.
+                        </p>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="how-to-file-complaint" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* How to Check Your MSME Samadhaan Case Status */}
-                    <div id="how-to-check-case-status" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                    {/* Section 8: MSME Samadhaan Login */}
+                    <div id="how-to-login" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            How to Check Your MSME Samadhaan Case Status
+                            MSME Samadhaan login kaise kaam karta hai? (how to login in MSME Samadhaan)
                         </h2>
                         <p className="nave-font pb-4">
-                            Once you've filed, you don't have to wait around wondering what's happening. Log back into the portal with your Udyam registration number and there's a live dashboard that shows you exactly where your case stands – whether it's been received, is under review, or has been scheduled for a hearing before the MSEFC.
+                            Portal use karne ke liye aapko login ya registration details chahiye hoti hain. Official ecosystem mein Udyam-linked business identity important hoti hai. Isliye valid Udyam Registration ready rakhna practical hai. Simple terms mein, how to register in MSME Samadhaan samajhne ke liye sabse pehle official eligibility aur linked business details verify karni chahiye.
                         </p>
                         <p className="nave-font pb-4">
-                            This is what the <span className="font-semibold">MSME Samadhaan delayed payment monitoring system</span> is designed to do – keep you in the loop at every stage without requiring you to call anyone or visit an office.
+                            Login ke baad aap complaint-related actions aur case tracking access kar sakte ho.
                         </p>
-                        <div className="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 mb-4" role="alert">
-                            <div className="flex items-center">
-                                <span className="text-xl mr-2">⏰</span>
-                                <p className="font-semibold">How long does resolution take?</p>
-                            </div>
-                            <p>The ideal timeline is <span className="font-semibold">90 days</span> via the Facilitation Council. In practice, backlogs in some states can extend this to 6–12 months. Filing early with complete documentation significantly speeds things up.</p>
-                        </div>
                         <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="how-to-check-case-status" />
+                            <HeartButton />
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
 
-                    {/* A Note If You're a Buyer Working with MSMEs */}
-                    <div id="note-for-buyers" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl my-12 shadow-lg">
+                    {/* Section 9: Case Status */}
+                    <div id="case-status" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
-                            A Note If You're a Buyer Working with MSMEs
+                            MSME Samadhaan case status kaise check karein?
                         </h2>
                         <p className="nave-font pb-4">
-                            This isn't just a read for MSMEs. If your business regularly purchases goods or services from small businesses, Section 43B(h) directly affects your tax position. A lot of companies are still unaware of this — and are unknowingly accumulating both interest liability and reduced deductions. A few simple internal practices can avoid all of that:
+                            Case file karne ke baad aap uska status bhi track kar sakte ho. Portal pe jao, login karo, aur case status section open karo. Wahan se aap dekh sakte ho ki case kis stage pe hai aur kya action liya gaya hai. Isi ko log <span className="font-semibold">MSME Samadhaan case status</span> ke naam se search karte hain.
                         </p>
-                        <ul className="list-disc ml-5 space-y-2 pb-4">
-                            <li>Verify MSME/Udyam status before onboarding any new supplier</li>
-                            <li>Clearly define payment terms in every vendor agreement</li>
-                            <li>Set internal reminders to track 45-day deadlines proactively</li>
-                            <li>Keep all documentation ready – invoices, receipts, delivery confirmation</li>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 10: Common Mistakes */}
+                    <div id="common-mistakes" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            MSMEs yahan sabse zyada galti kahan karte hain?
+                        </h2>
+                        <p className="nave-font pb-4">
+                            Zyada tar log bahut late action lete hain. Sochte rehte hain: “thoda aur wait kar lete hain” aur phir months nikal jaate hain. Dusri problem: documents proper nahi hote. Teesri: case file karke follow-up nahi karte.
+                        </p>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 11: The Reality */}
+                    <div id="reality" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            Reality kya hai? (straight baat)
+                        </h2>
+                        <p className="nave-font pb-4">
+                            Complaint file karte hi payment nahi aata. Lekin pressure create hota hai, legal process start hota hai, aur buyer serious ho jaata hai.
+                        </p>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 11 (cont): Practical Advice */}
+                    <div id="practical-approach" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            Aapko kya karna chahiye? (practical approach)
+                        </h2>
+                        <p className="nave-font pb-4">
+                            Agar payment stuck hai: pehle follow up karo. Phir written reminder bhejo. Aur agar still problem solve nahi hoti, official MSME delayed-payment mechanism use karo aur latest filing route verify karke aage badho.
+                        </p>
+                        <p className="nave-font pb-4 font-semibold text-gray-800">
+                            Matlab: emotional nahi, practical approach rakho.
+                        </p>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 12: MSME Ki Baat Guidance */}
+                    <div id="msme-ki-baat-help" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg">
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
+                            MSME Ki Baat yahan kaise help karta hai?
+                        </h2>
+                        <p className="nave-font pb-4">
+                            Zyada tar business owners ko law samajhne mein problem nahi hoti. Problem hoti hai: “ab next step kya hai?”
+                        </p>
+                        <p className="nave-font pb-4">
+                            Hum yahan help karte hain: situation samajhne mein, sahi decision lene mein, aur galtiyon se bachne mein. Agar aapko aise simple explanations chahiye, aap <strong>MSME Ki Baat by Hemant Chutani</strong> ko follow kar sakte ho. Yahan hum real MSME problems ko simple language mein explain karte hain.
+                        </p>
+                        <p className="nave-font pb-4">
+                            Agar aapka payment stuck hai aur aap confused ho ki kya karein, guided clarity ke liye humse connect kar sakte ho.
+                        </p>
+                        <div className="flex justify-between border-t border-gray-300 py-4">
+                            <HeartButton />
+                            <ShareButton title={BLOG_TITLE} />
+                        </div>
+                    </div>
+
+                    {/* Section 13: Official References Block */}
+                    <div id="official-references" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-12 shadow-lg bg-gray-50 border border-gray-200">
+                        <h3 className="font-headline text-2xl md:text-3xl text-[#02443A] font-semibold mb-4">
+                            Official Reference Note
+                        </h3>
+                        <p className="nave-font pb-4 text-sm text-gray-700">
+                            For legal accuracy and latest filing process, readers should verify the current official process on the portals below before taking action:
+                        </p>
+                        <ul className="list-none space-y-2 pb-4 text-sm">
+                            <li><span className="font-semibold text-gray-800">MSME Samadhaan official portal:</span> <Link href="https://samadhaan.msme.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://samadhaan.msme.gov.in/</Link></li>
+                            <li><span className="font-semibold text-gray-800">MSME ODR portal for new applications:</span> <Link href="https://odr.msme.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://odr.msme.gov.in/</Link></li>
+                            <li><span className="font-semibold text-gray-800">Ministry of MSME FAQ:</span> <Link href="https://msme.gov.in/faqs/q33-what-are-guidelines-delayed-payment-dues-mse-borrowers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://msme.gov.in/faqs/...</Link></li>
+                            <li><span className="font-semibold text-gray-800">MSMED Act, 2006 (official text):</span> <Link href="https://www.indiacode.nic.in/bitstream/123456789/2013/3/A2006-27.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF Link</Link></li>
+                            <li><span className="font-semibold text-gray-800">Official Udyam Registration portal:</span> <Link href="https://www.udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://www.udyamregistration.gov.in/</Link></li>
                         </ul>
-                        <div className="bg-red-50 border-l-4 border-red-500 text-red-800 p-4 mb-4" role="alert">
-
-                            <p>Delays now cost you two ways — compound interest at 3x RBI rate, AND a higher tax bill because you can't deduct the unpaid amount. Paying MSMEs on time is simply smart financial management now.</p>
-                        </div>
-                        <div className="flex justify-between border-t border-gray-300 py-4">
-                            <HeartButton sectionId="note-for-buyers" />
-                            <ShareButton title={BLOG_TITLE} />
-                        </div>
                     </div>
+
+                    {/* Section 14: Disclaimer Block */}
+                    <div className="blog-hero-section px-4 md:px-8 py-6 rounded-xl mt-6 shadow-sm border border-gray-300 text-gray-600 text-xs text-justify">
+                        <strong className="block mb-2 text-sm text-gray-800">Disclaimer</strong>
+                        <p>
+                            MSME Ki Baat acts as an informational and guidance platform for Indian businesses. (MSME Ki Baat ek informational aur guidance platform hai.) Sabhi official complaints, decisions aur legal actions government authorities aur official portals ke through process hote hain. Filing route, eligibility, aur portal workflow time ke saath update ho sakte hain, isliye official source ko final reference maana jaye. All official registrations, complaints, dispute handling, and final decisions are processed by the relevant government authorities and portals as per their official rules and procedures. Because official filing routes and portal workflows may change, users should verify the latest process on the official Ministry / portal links before filing a case.
+                        </p>
+                    </div>
+
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}
@@ -577,7 +483,7 @@ const Main = () => {
                 </Swiper>
             </aside>
 
-            {/* Replaced FaqSection with the new faqs content */}
+            {/* FaqSection with new FAQs content */}
             <FaqSection faqs={faqs} />
         </main>
     );

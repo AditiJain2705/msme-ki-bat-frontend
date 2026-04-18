@@ -2,48 +2,43 @@ import Main from "./Main";
 import Script from "next/script";
 
 export const metadata = {
-  title:
-    "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast | MsmekiBaat",
+  title: "MSME Samadhaan Portal & 45 Days Payment Rule | Simple Guide for Business Owners",
   description:
-    "Struggling with delayed payments? Learn how the MSME Samadhaan portal, the 45-day MSME payment rule, and Section 43B(h) help small businesses recover dues faster in 2024–25.",
+    "Understand MSME Samadhaan portal, 45 days payment rule, complaint process, login, case status, delayed payment monitoring system, and MSME late payment interest rate in simple language. A practical guide for Indian business owners.",
   keywords: [
-    "MSME Samadhaan",
-    "MSME Samadhaan portal",
-    "MSME Samadhaan login",
-    "MSME Samadhaan case status",
+    "msme samadhaan",
+    "msme samadhaan portal",
+    "msme samadhaan login",
+    "msme samadhaan case status",
+    "msme samadhaan complaint",
+    "msme samadhaan delayed payment monitoring system",
+    "delayed payment monitoring system",
     "45 days payment rule",
-    "MSME payment rule",
-    "Section 43B(h)",
-    "MSMED Act",
-    "Udyam registration",
-    "MSEFC",
-    "delayed payment MSME",
+    "msme 45 days payment rule",
+    "msme payment rule",
+    "msme late payment interest rate"
   ],
   robots: "index, follow",
   alternates: {
-    canonical:
-      "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule",
+    canonical: "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule",
   },
   openGraph: {
     type: "article",
-    title:
-      "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast | MsmekiBaat",
+    title: "MSME Samadhaan Portal & 45 Days Payment Rule | Simple Guide for Business Owners",
     description:
-      "Struggling with delayed payments? Learn how the MSME Samadhaan portal, the 45-day MSME payment rule, and Section 43B(h) help small businesses recover dues faster in 2024-25.",
+      "Understand MSME Samadhaan portal, 45 days payment rule, complaint process, login, case status, delayed payment monitoring system, and MSME late payment interest rate in simple language.",
     url: "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule",
-    images: ["https://msmekibaat.com/images/blog/msme-samadhaan.jpg"],
-    site_name: "MSME Ki Baat",
+    images: ["https://msmekibaat.com/images/blog/msme-samadhaan-portal.jpg"],
+    siteName: "MSME Ki Baat",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "MSME Samadhaan Portal & 45-Day Payment Rule | MsmekiBaat",
+    title: "MSME Samadhaan Portal & 45 Days Payment Rule | Simple Guide for Business Owners",
     description:
-      "Learn how the MSME Samadhaan portal, 45-day payment rule, and Section 43B(h) help small businesses recover delayed payments faster.",
-    images: ["https://msmekibaat.com/images/blog/msme-samadhaan.jpg"],
+      "Understand MSME Samadhaan portal, 45 days payment rule, complaint process, login, case status, delayed payment monitoring system, and MSME late payment interest rate in simple language.",
+    images: ["https://msmekibaat.com/images/blog/msme-samadhaan-portal.jpg"],
   },
-  // Add meta author for better SEO
-  author: "Hemant Chutani", 
+  authors: [{ name: "Hemant Chutani" }],
 };
 
 const page = () => {
@@ -51,8 +46,21 @@ const page = () => {
     <>
       <Main />
 
+      {/* hreflang tags */}
+      <link
+        rel="alternate"
+        hrefLang="en-IN"
+        href="https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule"
+      />
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href="https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule"
+      />
+
+      {/* Full Schema Graph */}
       <Script
-        id="msme-faq-schema"
+        id="msme-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -65,62 +73,118 @@ const page = () => {
                 "url": "https://msmekibaat.com/",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://msmekibaat.com/new-home/msme-ki-bat-logo.webp"
+                  "url": "https://msmekibaat.com/logo.png"
                 },
-                "sameAs": ["https://youtube.com/@msmekibaat"]
+                "sameAs": [
+                  "https://youtube.com/@msmekibaat?si=XJ5_9m64cRlmtQge"
+                ]
               },
               {
                 "@type": "Person",
                 "@id": "https://msmekibaat.com/#hemant-chutani",
                 "name": "Hemant Chutani",
                 "jobTitle": "Founder",
-                "description": "Hemant Chutani explains MSME-related topics in simple language and helps Indian businesses understand practical next steps.",
-                "worksFor": { "@id": "https://msmekibaat.com/#organization" },
+                "worksFor": {
+                  "@id": "https://msmekibaat.com/#organization"
+                },
                 "sameAs": [
-                  "https://www.linkedin.com/in/hemant-chutani-a2974b117",
-                  "https://www.instagram.com/hemant_chutani",
-                  "https://youtube.com/@msmekibaat"
-                ]
+                  "https://www.linkedin.com/in/hemant-chutani-a2974b117?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                  "https://www.instagram.com/hemant_chutani?igsh=MWd5ejhram5jbXk2dQ%3D%3D&utm_source=qr",
+                  "https://youtube.com/@msmekibaat?si=XJ5_9m64cRlmtQge"
+                ],
+                "description": "Hemant Chutani explains MSME-related topics in simple language and helps Indian business owners understand practical next steps."
               },
               {
                 "@type": "WebSite",
                 "@id": "https://msmekibaat.com/#website",
                 "url": "https://msmekibaat.com/",
                 "name": "MSME Ki Baat",
-                "publisher": { "@id": "https://msmekibaat.com/#organization" },
+                "publisher": {
+                  "@id": "https://msmekibaat.com/#organization"
+                },
                 "inLanguage": "en-IN"
               },
               {
                 "@type": "BreadcrumbList",
                 "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#breadcrumb",
                 "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://msmekibaat.com/" },
-                  { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://msmekibaat.com/blogs/" },
-                  { "@type": "ListItem", "position": 3, "name": "MSME Samadhaan Portal", "item": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule" }
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://msmekibaat.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://msmekibaat.com/blogs/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "MSME Samadhaan Portal & 45 Days Payment Rule",
+                    "item": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule"
+                  }
                 ]
               },
               {
                 "@type": "WebPage",
                 "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#webpage",
                 "url": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule",
-                "name": "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast",
-                "isPartOf": { "@id": "https://msmekibaat.com/#website" },
-                "breadcrumb": { "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#breadcrumb" },
+                "name": "MSME Samadhaan Portal & 45 Days Payment Rule: Simple Guide for Business Owners",
+                "isPartOf": {
+                  "@id": "https://msmekibaat.com/#website"
+                },
+                "breadcrumb": {
+                  "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#breadcrumb"
+                },
                 "inLanguage": "en-IN"
               },
               {
                 "@type": "BlogPosting",
                 "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#article",
-                "mainEntityOfPage": { "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#webpage" },
-                "headline": "MSME Samadhaan Portal & 45-Day Payment Rule: Recover Delayed Payments Fast",
-                "description": "Struggling with delayed payments? Learn how the MSME Samadhaan portal, the 45-day MSME payment rule, and Section 43B(h) help small businesses recover dues faster in 2024-25.",
-                "author": { "@id": "https://msmekibaat.com/#hemant-chutani" },
-                "publisher": { "@id": "https://msmekibaat.com/#organization" },
-                "datePublished": "2026-04-05", // Assuming 2026-04-05 from PDF
-                "dateModified": "2026-04-05", // Assuming 2026-04-05 from PDF
+                "mainEntityOfPage": {
+                  "@id": "https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule/#webpage"
+                },
+                "headline": "MSME Samadhaan Portal & 45 Days Payment Rule: Simple Guide for Business Owners",
+                "description": "Understand MSME Samadhaan portal, 45 days payment rule, complaint process, login, case status, delayed payment monitoring system, and MSME late payment interest rate in simple language.",
+                "author": {
+                  "@id": "https://msmekibaat.com/#hemant-chutani"
+                },
+                "publisher": {
+                  "@id": "https://msmekibaat.com/#organization"
+                },
+                "datePublished": "2026-04-18",
+                "dateModified": "2026-04-18",
                 "inLanguage": "en-IN",
-                "image": ["https://msmekibaat.com/new-home/msme-ki-bat-logo.webp"],
-                "keywords": ["MSME Samadhaan", "45 day payment rule", "MSME payment rule", "Section 43B(h)", "delayed payment MSME", "MSMED Act", "Udyam registration", "MSEFC"]
+                "articleSection": [
+                  "Why delayed payments hurt MSMEs",
+                  "What is MSME Samadhaan",
+                  "45 days payment rule",
+                  "How to file complaint",
+                  "Login and case status",
+                  "Common mistakes",
+                  "Practical advice",
+                  "Official references",
+                  "MSME Ki Baat guidance"
+                ],
+                "keywords": [
+                  "msme samadhaan",
+                  "msme samadhaan portal",
+                  "msme samadhaan login",
+                  "msme samadhaan case status",
+                  "msme samadhaan complaint",
+                  "msme samadhaan delayed payment monitoring system",
+                  "delayed payment monitoring system",
+                  "45 days payment rule",
+                  "msme 45 days payment rule",
+                  "msme payment rule",
+                  "msme late payment interest rate"
+                ],
+                "image": [
+                  "https://msmekibaat.com/images/blog/msme-samadhaan-portal.jpg"
+                ]
               },
               {
                 "@type": "FAQPage",
@@ -128,61 +192,58 @@ const page = () => {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "Can I file on MSME Samadhaan without Udyam registration?",
+                    "name": "MSME Samadhaan kya hai?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "No. Udyam registration is mandatory — without it, the portal will not accept your complaint."
+                      "text": "Ye delayed payment disputes ko support karne wala government mechanism/platform ecosystem hai."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How does MSME Samadhaan work — is it litigation?",
+                    "name": "45 days rule kya hai?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "It is a structured dispute resolution process, not traditional court litigation. Your complaint goes to the MSME Facilitation Council (MSEFC), which first tries conciliation. If that fails, it proceeds to arbitration. MSEFC decisions are legally binding and enforceable like a civil court decree."
+                      "text": "Buyer ko written agreement ke case mein maximum 45 din ke andar payment karna hota hai. Without agreement, due timeline aur bhi shorter ho sakti hai."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How much interest can I charge on delayed payments?",
+                    "name": "Case status kaise check karein?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "You are entitled to compound interest at three times the bank rate set by the RBI, calculated monthly for each month of delay. This interest is non-negotiable and cannot be waived — it is a statutory right under the MSMED Act."
+                      "text": "Portal pe login karke track kar sakte ho."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "Does Section 43B(h) apply to all buyers, even small ones?",
+                    "name": "Kya Udyam registration zaroori hai?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes. Section 43B(h) applies regardless of the buyer's size — large corporation, LLP, partnership, or sole proprietor. If they are buying from a Micro or Small Enterprise, the 45-day rule and its tax implications apply fully."
+                      "text": "Valid Udyam Registration practical aur official eligibility context mein important hai; current eligibility/process official portal par verify karna chahiye."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How to login to MSME Samadhaan?",
+                    "name": "Is MSME Samadhaan litigation?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Visit samadhaan.dcmsme.gov.in and enter your Udyam Registration Number. Access is verified via OTP sent to your Aadhaar-linked mobile number."
+                      "text": "Not exactly in the usual court-case sense. It is a statutory delayed-payment dispute mechanism that may move through the facilitation council process, so it should be understood as a formal legal remedy."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "Do I need a lawyer to file a complaint on MSME Samadhaan?",
+                    "name": "How to file MSME Samadhaan complaint?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "No. The process is designed to be filed independently by the MSME owner. Most businesses handle it themselves."
+                      "text": "Check the latest official filing route first, keep buyer details, invoice, pending amount, delivery proof, and agreement or purchase order ready, then proceed through the relevant official portal flow."
                     }
                   }
                 ]
               }
             ]
-          }),
+          })
         }}
       />
-
-      {/* Adding hreflang en-in tag */}
-      <link rel="alternate" hrefLang="en-in" href="https://msmekibaat.com/blogs/msme-samadhaan-portal-45-day-payment-rule" />
     </>
   );
 };
