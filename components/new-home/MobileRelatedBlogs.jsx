@@ -35,9 +35,7 @@ const MobileRelatedBlogs = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-semibold font-headline mb-4 text-[#02443A] ">
-                Related Blogs
-            </h2>
+
 
             <Swiper
                 modules={[Pagination]}

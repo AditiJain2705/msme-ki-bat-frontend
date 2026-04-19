@@ -2,6 +2,7 @@
 
 import FaqSection from "@/components/home/FaqSection";
 import WhoShouldApply from "@/components/home/WhoShouldApply"; // Retaining for now, but not used in this specific blog content.
+import AuthorCard from "@/components/new-home/AuthorCard";
 import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
 import RelatedBlogs from "@/components/new-home/RelatedBlogs";
 import { Heart, Share2 } from "lucide-react";
@@ -9,6 +10,7 @@ import Image from "next/image"; // Retaining for now, but not used in this speci
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosShareAlt } from "react-icons/io";
+import { IoPersonCircleOutline } from "react-icons/io5";
 
 
 const sections = [
@@ -190,8 +192,16 @@ const Main = () => {
         <main>
             {/* Hero */}
             <section className="w-full blog-hero-section py-20 md:py-28">
-                <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto font-headline">
+                <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto font-headline px-2">
                     {BLOG_TITLE}
+                    <Link
+                        href="https://www.linkedin.com/in/hemant-chutani-a2974b117/"
+                        target="_blank"
+                        className=" flex items-center text-sm justify-center gap-2 text-gray-600 hover:text-blue-700 underline transition mt-6       "
+                    >
+                        <IoPersonCircleOutline className="text-base" />
+                        By Hemant Chutani
+                    </Link>
                 </h1>
             </section>
 
@@ -540,6 +550,7 @@ const Main = () => {
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
+                    <AuthorCard />
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}

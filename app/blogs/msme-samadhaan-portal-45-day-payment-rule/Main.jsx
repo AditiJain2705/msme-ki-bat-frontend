@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
 import RelatedBlogs from "@/components/new-home/RelatedBlogs";
+import AuthorCard from "@/components/new-home/AuthorCard";
+import { IoPersonCircleOutline } from "react-icons/io5";
 
 const sections = [
     { id: "intro", title: "Introduction" },
@@ -161,6 +163,14 @@ const Main = () => {
             <section className="w-full blog-hero-section py-20 md:py-28">
                 <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] text-[#02443A] max-w-5xl mx-auto font-headline px-2">
                     {BLOG_TITLE}
+                    <Link
+                        href="https://www.linkedin.com/in/hemant-chutani-a2974b117/"
+                        target="_blank"
+                        className=" flex items-center text-sm justify-center gap-2 text-gray-600 hover:text-blue-700 underline transition mt-6       "
+                    >
+                        <IoPersonCircleOutline className="text-base" />
+                        By Hemant Chutani
+                    </Link>
                 </h1>
                 <p className="text-center text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-4">
                     Understand delayed payment complaints, 45 days payment rule, case status, login, and what to do next if your payment is stuck.
@@ -447,13 +457,13 @@ const Main = () => {
                     </div>
 
                     {/* Section 14: Disclaimer Block */}
-                    <div className="blog-hero-section px-4 md:px-8 py-6 rounded-xl mt-6 shadow-sm border border-gray-300 text-gray-600 text-xs text-justify">
+                    <div className="blog-hero-section px-4 md:px-8 py-6 rounded-xl my-6 shadow-sm border border-gray-300 text-gray-600 text-xs text-justify">
                         <strong className="block mb-2 text-sm text-gray-800">Disclaimer</strong>
                         <p>
                             MSME Ki Baat acts as an informational and guidance platform for Indian businesses. (MSME Ki Baat ek informational aur guidance platform hai.) Sabhi official complaints, decisions aur legal actions government authorities aur official portals ke through process hote hain. Filing route, eligibility, aur portal workflow time ke saath update ho sakte hain, isliye official source ko final reference maana jaye. All official registrations, complaints, dispute handling, and final decisions are processed by the relevant government authorities and portals as per their official rules and procedures. Because official filing routes and portal workflows may change, users should verify the latest process on the official Ministry / portal links before filing a case.
                         </p>
                     </div>
-
+                    <AuthorCard />
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}

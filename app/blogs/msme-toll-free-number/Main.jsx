@@ -12,6 +12,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import RelatedBlogs from "@/components/new-home/RelatedBlogs";
 import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
+import AuthorCard from "@/components/new-home/AuthorCard";
+import { IoPersonCircleOutline } from "react-icons/io5";
 
 const sections = [
     { id: "intro", title: "Introduction" },
@@ -192,6 +194,14 @@ const Main = () => {
                 <h1 className="text-4xl md:text-[53px] text-center font-semibold md:leading-[59px] font-medium text-[#02443A] max-w-5xl mx-auto font-headline">
                     {BLOG_TITLE}
                 </h1>
+                <Link
+                    href="https://www.linkedin.com/in/hemant-chutani-a2974b117/"
+                    target="_blank"
+                    className=" flex items-center text-sm justify-center gap-2 text-gray-600 hover:text-blue-700 underline transition mt-6       "
+                >
+                    <IoPersonCircleOutline className="text-base" />
+                    By Hemant Chutani
+                </Link>
             </section>
 
             {/* Layout */}
@@ -526,6 +536,7 @@ const Main = () => {
                             <ShareButton title={BLOG_TITLE} />
                         </div>
                     </div>
+                    <AuthorCard />
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}

@@ -74,20 +74,20 @@ export default function HeroSection() {
 
                 {/* Buttons */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                    <button className="bg-blue-700 text-white py-2 rounded-xl shadow-md border-b-6 border-b-blue-900">
+                    <button className="bg-[#4e342e] text-white py-2 rounded-xl shadow-md border-b-6 border-b-[#3e2723]">
                         <div className="text-xs">GOVERNMENT SUPPORT</div>
-                        <div className="font-semibold">सरकारी योजना</div>
+                        <div className=" arya tracking-wider">सरकारी योजना</div>
                     </button>
 
                     <button className="bg-[#b97a00] text-white py-2 rounded-xl shadow-md border-b-6 border-b-yellow-700">
                         <div className="text-xs">BUSINESS GROWTH</div>
-                        <div className="font-semibold">व्यापार विकास</div>
+                        <div className=" arya tracking-wider">व्यापार विकास</div>
                     </button>
                 </div>
 
                 <button className="w-full border-2 border-blue-900 py-2 rounded-xl">
                     <div className="text-xs text-gray-700">MARKETING & SALES</div>
-                    <div className="font-semibold">बाजार और बिक्री</div>
+                    <div className=" arya tracking-wider">बाजार और बिक्री</div>
                 </button>
 
             </div>
