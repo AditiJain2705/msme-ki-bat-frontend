@@ -16,7 +16,7 @@ const FEATURED_NEWS = {
 const COMPACT_NEWS = [
     {
         id: 1,
-        src: "/blog/msme-toll-free-number.jpeg",
+        src: "/new-home/msme-ki-bat-logo.webp",
         alt: "msme news",
         tag: "Toll Free Number",
         tagColor: "tertiary",
