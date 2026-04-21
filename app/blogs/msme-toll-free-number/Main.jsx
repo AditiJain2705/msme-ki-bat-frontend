@@ -14,6 +14,7 @@ import RelatedBlogs from "@/components/new-home/RelatedBlogs";
 import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
 import AuthorCard from "@/components/new-home/AuthorCard";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import Disclaimer from "@/components/new-home/Disclaimer";
 
 const sections = [
     { id: "intro", title: "Introduction" },
@@ -537,6 +538,7 @@ const Main = () => {
                         </div>
                     </div>
                     <AuthorCard />
+                    <Disclaimer />
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}

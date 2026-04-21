@@ -3,6 +3,7 @@
 import FaqSection from "@/components/home/FaqSection";
 import WhoShouldApply from "@/components/home/WhoShouldApply"; // Retaining for now, but not used in this specific blog content.
 import AuthorCard from "@/components/new-home/AuthorCard";
+import Disclaimer from "@/components/new-home/Disclaimer";
 import MobileRelatedBlogs from "@/components/new-home/MobileRelatedBlogs";
 import RelatedBlogs from "@/components/new-home/RelatedBlogs";
 import { Heart, Share2 } from "lucide-react";
@@ -252,7 +253,10 @@ const Main = () => {
 
                 {/* BLOG CONTENT */}
                 <section className="w-full lg:w-1/2 nave-font px-6">
+                    <section className="  rounded-lg mt-6 md:mt-12 shadow-lg">
+                        <Image alt={"gem registration"} height={500} width={700} className="w-full h-full object-cover opacity-90 rounded-xl shadow-xl" src={"/blog/gem-registration.webp"} />
 
+                    </section>
                     {/* Intro */}
                     <div id="intro" className="blog-hero-section px-4 md:px-8 pt-8 rounded-lg mt-6 md:mt-12 shadow-lg">
                         <p className="nave-font pb-4">
@@ -551,6 +555,7 @@ const Main = () => {
                         </div>
                     </div>
                     <AuthorCard />
+                    <Disclaimer />
                 </section>
 
                 {/* DESKTOP RIGHT SIDEBAR */}

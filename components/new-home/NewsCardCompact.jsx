@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function NewsCardCompact({ src, alt, tag, tagColor = "secondary", title, excerpt, hasBorder = true, blogLink }) {
@@ -19,7 +20,7 @@ export default function NewsCardCompact({ src, alt, tag, tagColor = "secondary",
                 </div>
             </div>
             <div className="size-24 lg:size-28 rounded-lg bg-surface-container-highest overflow-hidden flex-none">
-                <img alt={alt} className="w-full h-full object-cover opacity-90" src={src} />
+                <Image alt={alt} height={100} width={100} className="w-full h-full object-cover opacity-90" src={src} />
             </div>
 
         </Link>

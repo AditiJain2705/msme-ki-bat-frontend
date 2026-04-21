@@ -1,53 +1,58 @@
+// page.js
 import Main from "./Main";
 import Script from "next/script";
 
 export const metadata = {
-  title: "GeM Registration 2026 | Process, Fees, Eligibility & Seller Guide",
+  title:
+    "GeM Registration (India): Process, Benefits, Eligibility & Government Selling Guide",
 
   description:
-    "Learn GeM registration process step by step. Check eligibility, fees, documents required and how to start selling on Government e-Marketplace.",
+    "Understand GeM registration, GeM portal benefits, registration process, Startup India exemptions, and how businesses can sell directly to government departments through GeM.",
 
   keywords: [
     "gem registration",
     "gem portal registration",
     "gem registration process",
     "gem registration fees",
+    "what is gem registration",
     "how to register on gem portal",
-    "seller registration gem",
+    "government e marketplace registration",
+    "gem seller registration",
+    "gem portal benefits",
   ],
 
   robots: "index, follow",
 
   alternates: {
-    canonical: "https://msmekibaat.com/blogs/gem-registration",
+    canonical: "https://msmekibaat.com/blog/gem-registration",
     languages: {
-      "en-in": "https://msmekibaat.com/blogs/gem-registration",
-      // Removed x-default as per PDF
+      "en-in": "https://msmekibaat.com/blog/gem-registration",
     },
   },
 
   openGraph: {
     type: "article",
-    title: "GeM Registration 2026 | Process, Fees, Eligibility & Seller Guide",
+    title:
+      "GeM Registration (India): Process, Benefits, Eligibility & Government Selling Guide",
     description:
-      "Learn GeM registration process step by step. Check eligibility, fees, documents required and how to start selling on Government e-Marketplace.",
-    url: "https://msmekibaat.com/blogs/gem-registration",
+      "Understand GeM registration, GeM portal benefits, registration process, Startup India exemptions, and how businesses can sell directly to government departments through GeM.",
+    url: "https://msmekibaat.com/blog/gem-registration",
     siteName: "MSME Ki Baat",
     images: [
       {
-        url: "https://msmekibaat.com/images/blog/gem-registration.jpg",
+        url: "https://msmekibaat.com/blog/gem-registration.webp",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "GeM Registration 2026 | Process, Fees, Eligibility & Seller Guide",
+    title:
+      "GeM Registration (India): Process, Benefits, Eligibility & Government Selling Guide",
     description:
-      "Learn GeM registration process step by step. Check eligibility, fees, documents required and how to start selling on Government e-Marketplace.",
+      "Understand GeM registration, GeM portal benefits, registration process, Startup India exemptions, and how businesses can sell directly to government departments through GeM.",
     images: ["https://msmekibaat.com/images/blog/gem-registration.jpg"],
   },
-  // Added Meta Author Tag as per PDF
   author: "Hemant Chutani",
 };
 
@@ -70,10 +75,9 @@ const page = () => {
                 url: "https://msmekibaat.com/",
                 logo: {
                   "@type": "ImageObject",
-                  // Updated logo URL as per PDF
                   url: "https://msmekibaat.com/new-home/msme-ki-bat-logo.webp",
                 },
-                sameAs: ["https://youtube.com/@msmekibaat"],
+                sameAs: ["https://youtube.com/@msmekibaat?si=XJ5_9m64cRlmtQge"],
               },
               {
                 "@type": "Person",
@@ -84,12 +88,12 @@ const page = () => {
                   "@id": "https://msmekibaat.com/#organization",
                 },
                 sameAs: [
-                  "https://www.linkedin.com/in/hemant-chutani-a2974b117",
-                  "https://www.instagram.com/hemant_chutani",
-                  "https://youtube.com/@msmekibaat",
+                  "https://www.linkedin.com/in/hemant-chutani-a2974b117?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                  "https://www.instagram.com/hemant_chutani?igsh=MWd5ejhram5jbXk2dQ%3D%3D&utm_source=qr",
+                  "https://youtube.com/@msmekibaat?si=XJ5_9m64cRlmtQge",
                 ],
                 description:
-                  "Hemant Chutani explains MSME-related topics in simple language and helps Indian businesses understand practical next steps.",
+                  "Hemant Chutani explains MSME-related topics in simple language and helps Indian business owners understand practical next steps.",
               },
               {
                 "@type": "WebSite",
@@ -104,7 +108,7 @@ const page = () => {
               {
                 "@type": "BreadcrumbList",
                 "@id":
-                  "https://msmekibaat.com/blogs/gem-registration/#breadcrumb",
+                  "https://msmekibaat.com/blog/gem-registration/#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -116,65 +120,79 @@ const page = () => {
                     "@type": "ListItem",
                     position: 2,
                     name: "Blog",
-                    item: "https://msmekibaat.com/blogs/",
+                    item: "https://msmekibaat.com/blog/",
                   },
                   {
                     "@type": "ListItem",
                     position: 3,
                     name: "GeM Registration",
-                    item: "https://msmekibaat.com/blogs/gem-registration",
+                    item: "https://msmekibaat.com/blog/gem-registration",
                   },
                 ],
               },
               {
                 "@type": "WebPage",
-                "@id": "https://msmekibaat.com/blogs/gem-registration/#webpage",
-                url: "https://msmekibaat.com/blogs/gem-registration",
+                "@id": "https://msmekibaat.com/blog/gem-registration/#webpage",
+                url: "https://msmekibaat.com/blog/gem-registration",
                 name:
-                  "GeM Registration 2026: Complete Process, Fees, Eligibility & How to Sell on Government Portal",
+                  "GeM Registration: How Businesses Can Sell Directly to the Government",
                 isPartOf: {
                   "@id": "https://msmekibaat.com/#website",
                 },
                 breadcrumb: {
                   "@id":
-                    "https://msmekibaat.com/blogs/gem-registration/#breadcrumb",
+                    "https://msmekibaat.com/blog/gem-registration/#breadcrumb",
                 },
                 inLanguage: "en-IN",
               },
               {
                 "@type": "BlogPosting",
-                "@id": "https://msmekibaat.com/blogs/gem-registration/#article",
+                "@id": "https://msmekibaat.com/blog/gem-registration/#article",
                 mainEntityOfPage: {
                   "@id":
-                    "https://msmekibaat.com/blogs/gem-registration/#webpage",
+                    "https://msmekibaat.com/blog/gem-registration/#webpage",
                 },
                 headline:
-                  "GeM Registration 2026: Complete Process, Fees, Eligibility & How to Sell on Government Portal",
+                  "GeM Registration: How Businesses Can Sell Directly to the Government",
                 description:
-                  "Learn what GeM is, who can register, what documents are needed, and how to approach GeM properly as a business owner.",
+                  "Understand GeM registration, GeM portal benefits, registration process, Startup India exemptions, and how businesses can sell directly to government departments through GeM.",
                 author: {
                   "@id": "https://msmekibaat.com/#hemant-chutani",
                 },
                 publisher: {
                   "@id": "https://msmekibaat.com/#organization",
                 },
-                datePublished: "2026-04-05",
-                dateModified: "2026-04-05",
+                datePublished: "2026-04-21",
+                dateModified: "2026-04-21",
                 inLanguage: "en-IN",
-                image: [
-                  "https://msmekibaat.com/images/blog/gem-registration.jpg",
+                articleSection: [
+                  "What has changed in government selling",
+                  "What is GeM registration",
+                  "Why GeM matters",
+                  "Who can apply",
+                  "Benefits for startups and MSMEs",
+                  "GeM registration process",
+                  "Official GeM portal",
+                  "What you can sell",
+                  "Common mistakes",
+                  "MSME Ki Baat guidance",
                 ],
                 keywords: [
                   "gem registration",
                   "gem portal registration",
                   "gem registration process",
                   "gem registration fees",
-                  "seller registration gem",
+                  "what is gem registration",
+                  "how to register on gem portal",
+                  "government e marketplace registration",
+                  "gem seller registration",
+                  "gem portal benefits",
                 ],
+                image: ["https://msmekibaat.com/blog/gem-registration.webp"],
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://msmekibaat.com/blogs/gem-registration/#faq",
+                "@id": "https://msmekibaat.com/blog/gem-registration/#faq",
                 mainEntity: [
                   {
                     "@type": "Question",
@@ -182,7 +200,7 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text:
-                        "GeM registration allows businesses to sell products and services directly to government buyers through the Government e-Marketplace.",
+                        "It is the process of registering your business on the Government e-Marketplace.",
                     },
                   },
                   {
@@ -191,44 +209,25 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text:
-                        "Yes, registration is free but requires proper documentation and strategy.",
+                        "Registration on GeM is generally free, though compliance, listing, and operational preparation still require effort.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can small businesses register on GeM?",
+                    name: "Can startups register on GeM?",
                     acceptedAnswer: {
                       "@type": "Answer",
                       text:
-                        "Yes, MSMEs and small businesses can register and may get preference advantages.",
-                    },
-                  },
-                  // Added 3 Missing FAQs as per PDF
-                  {
-                    "@type": "Question",
-                    name: "How long does GeM registration take?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text:
-                        "GeM registration itself can be completed in a few hours if all documents are ready. Activation and catalog approval may take additional time depending on the category.",
+                        "Yes. Startups can register on GeM, and eligible DPIIT-recognized startups may get certain procurement-related relaxations.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Do I need GST for GeM?",
+                    name: "Do I need experience to sell on GeM?",
                     acceptedAnswer: {
                       "@type": "Answer",
                       text:
-                        "GST details are required during GeM registration if applicable to your business. Check your category requirements before applying as some categories may not require GST.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can MSME Ki Baat help me understand GeM better?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text:
-                        "Yes. MSME Ki Baat helps business owners understand whether GeM is right for them, what category to enter, what mistakes to avoid, and how to approach it practically rather than just registering and doing nothing.",
+                        "In some cases, eligible startups receive relaxation from prior experience requirements, subject to tender conditions and technical requirements.",
                     },
                   },
                 ],

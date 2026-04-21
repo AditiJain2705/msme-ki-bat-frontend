@@ -16,7 +16,7 @@ const FEATURED_NEWS = {
 const COMPACT_NEWS = [
     {
         id: 1,
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZMFwhho8N0-ze-QnutAVNfKH60Bq4FDm4AOBluTd8ue7viWKNMPvhkEPwsJ-Kt6S24mlRVg-01AGfo_Aev-qQUAchbEjV_OjMMEnlVJTJDqKqkKCXD4xsQr1c7jdP80-FsKO3AHl9nbCUAUzS_tSJJ0SQWj5cU2TgQYkwgi0auRr1hprurIXm1_I6U7ayhosLqW5XZuen28KDmaaHxTMidkq6jlX6Mh6DqH0nF1uwx5ScmB7H2PMG0GxeZ0IRHta5CBZ4NfxTONfs",
+        src: "/blog/msme-toll-free-number.jpeg",
         alt: "msme news",
         tag: "Toll Free Number",
         tagColor: "tertiary",
@@ -28,7 +28,7 @@ const COMPACT_NEWS = [
     },
     {
         id: 2,
-        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBH2btzt13v8f2JVzQbyl-xUQlsWRIE-tjKkWh5UNmL9RcR2uzdn5w6TWibRfhVcGLKz-b20Ndi_lnnvamPDTzI7s3pk-l6RXmbFX_tonnOZkEiuFe5z0bAi8FC0YAs6_XERSMRv_tPgTOtStHQC7rXX67tww2_seMqT80riJz7qjeIwLq4kk4Z6IywlKXH-P6cU6wM6aZZOm7XipmvMPaNwk_OLxA0WNCvXKYugmvgoHlhJK_Xl0AvvXEzfLD_hQIK7rvndqHp2F1N",
+        src: "/blog/gem-registration.webp",
         alt: "msme news",
         tag: "GeM Registration 2026",
         tagColor: "secondary",
