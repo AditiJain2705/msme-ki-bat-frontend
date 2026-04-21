@@ -228,13 +228,11 @@ const Main = () => {
                     </div>
                 </aside>
 
-                {/* BLOG CONTENT */}
                 <section className="w-full lg:w-1/2 nave-font px-6">
                     <section className="  rounded-lg mt-6 md:mt-12 shadow-lg">
                         <Image alt={"gem registration"} height={500} width={700} className="w-full h-full object-cover opacity-90 rounded-xl shadow-xl" src={"/blog/msme-samadhan.webp"} />
 
                     </section>
-                    {/* Section 2: Problem Intro Block */}
                     <div id="intro" className="blog-hero-section px-4 md:px-8 pt-8 rounded-xl mt-6 md:mt-12 shadow-lg">
                         <h2 className="font-headline text-3xl md:text-4xl text-[#02443A] font-semibold mb-4">
                             “Payment kab milega?” - sabse badi problem
