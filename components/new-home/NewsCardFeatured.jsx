@@ -20,9 +20,14 @@ export default function NewsCardFeatured({ src, alt, tag, title, excerpt, author
                 <p className="text-on-surface-variant text-sm md:text-base leading-relaxed mb-4">{excerpt}</p>
                 <div className="flex items-center justify-between pt-4 border-t border-outline-variant/20">
                     <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center">
-                            <IoPersonSharp />
-
+                        <div className="w-10 h-10    relative rounded-full overflow-hidden">
+                            <Image
+                                src="/new-home/hemant-chutani.jpeg" // replace with your image
+                                alt="Author"
+                                height={52}
+                                width={52}
+                                className="object-cover"
+                            />
                         </div>
                         <span className="text-[11px] md:text-xs font-bold text-on-surface-variant uppercase">
                             By {author}

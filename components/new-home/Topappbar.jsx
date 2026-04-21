@@ -80,7 +80,7 @@ export default function TopAppBar() {
                             className={`flex items-center gap-2 justify-center rounded-xl px-4 py-1 transition-transform duration-150
                             hover:scale-105 active:scale-95
                             ${isActive
-                                    ? "bg-secondary text-on-secondary"
+                                    ? "bg-[#4e342e] text-on-secondary"
                                     : "text-primary opacity-70"
                                 }`}
                         >
@@ -104,7 +104,7 @@ export default function TopAppBar() {
 
             {/* Menu Button */}
             <button
-                className="bg-secondary text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 "
+                className="bg-[#4e342e] text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 "
                 onClick={() => setOpen(true)}
                 aria-label="Open menu"
             >

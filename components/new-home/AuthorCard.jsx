@@ -14,11 +14,12 @@ export default function AuthorCard() {
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     {/* Profile Image */}
-                    <div className="w-16 h-16 relative rounded-full overflow-hidden">
-                        <img
-                            src="/author.jpg" // replace with your image
+                    <div className="w-16 h-16    relative rounded-full overflow-hidden">
+                        <Image
+                            src="/new-home/hemant-chutani.jpeg" // replace with your image
                             alt="Author"
-                            fill
+                            height={64}
+                            width={64}
                             className="object-cover"
                         />
                     </div>
@@ -44,11 +45,7 @@ export default function AuthorCard() {
 
             {/* Description */}
             <p className="text-gray-600 mt-6 leading-relaxed text-sm md:text-base">
-                I am an advocate by profession and have a keen interest in writing. I
-                write articles in various categories, from legal, business, personal
-                finance, and investments to government schemes. I put words in a
-                simplified manner and write easy-to-understand articles.{" "}
-
+                Hemant Chutani is a notable speaker for MSMEs in India and a strong voice for business owners seeking the right guidance, systems, and government support. For the past 5 years, he has worked closely with MSMEs across India, interacted with thousands of business owners, and helped 1,000+ MSMEs grow with better clarity, practical direction, and access to the right government opportunities — all with a larger mission aligned with Atmanirbhar Bharat.
             </p>
         </div>
     );

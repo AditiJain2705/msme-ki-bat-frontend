@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import LeadFormPopup from "../form/Leadformpopup";
-const TAGS = ["The Tatas", "Textile History", "Banking Roots"];
+const TAGS = ["MSME Support", "Business Tips", "Registrations"];
 
 export default function HeritageAnalysis() {
     const [open, setOpen] = useState(false);
@@ -12,10 +12,10 @@ export default function HeritageAnalysis() {
                 <div className="heritage-pattern-strip absolute inset-0 opacity-10" />
                 <div className="relative z-10">
                     <h5 className="font-headline text-2xl md:text-3xl lg:text-4xl font-bold mb-2 italic">
-                        Verified Heritage Analysis
+                        MSME Knowledge Hub
                     </h5>
                     <p className="text-primary-fixed-dim text-sm md:text-lg mb-4">
-                        Deep dives into the families and institutions that built the backbone of modern India.
+                        Clear, simple and practical content on MSME growth, support,registration and real business challenges.
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {TAGS.map((tag) => (
