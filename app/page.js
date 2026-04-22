@@ -7,7 +7,7 @@ import TopBusinessNewsSection from "@/components/new-home/TopBusinessNewsSection
 import Image from "next/image";
 
 export const metadata = {
-  title: "MSME Ki Baat",
+  title: "MSME Ki Baat - Seedhi Baat for Indian Business Owners",
   description:
     "MSME Ki Baat by Hemant Chutani - practical guidance on government schemes, registrations, and business support for Indian Businesses.",
 };

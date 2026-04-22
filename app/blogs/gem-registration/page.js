@@ -162,8 +162,8 @@ const page = () => {
                 publisher: {
                   "@id": "https://msmekibaat.com/#organization",
                 },
-                datePublished: "2026-04-21",
-                dateModified: "2026-04-21",
+                datePublished: "2026-04-22T00:00:00+05:30",
+                dateModified: "2026-04-22T00:00:00+05:30",
                 inLanguage: "en-IN",
                 articleSection: [
                   "What has changed in government selling",
