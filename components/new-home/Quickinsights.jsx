@@ -25,7 +25,7 @@ export default function QuickInsights() {
                 <div>
                     <h3 className="font-headline text-2xl md:text-3xl font-bold text-primary pb-2">Expert Insights</h3>
                     <p className="font-body text-sm md:text-base text-on-surface-variant">
-                        Expert analysis in 60 seconds
+                        MSME ki baat in 60 seconds
                     </p>
                 </div>
                 <button className="text-secondary font-bold text-sm tracking-wide uppercase">
