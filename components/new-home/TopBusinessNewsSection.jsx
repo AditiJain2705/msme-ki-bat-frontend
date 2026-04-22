@@ -7,7 +7,7 @@ const FEATURED_NEWS = {
     tag: "Samadhaan Portal",
     title: "The MSME Samadhaan Portal: Your Solution for Delayed Payments",
     excerpt:
-        "A strategic pivot towards luxury traditional wear marks a new era for the retail giant as consumer preferences shift to artisanal authenticity.",
+        "    Understand delayed payment complaints, 45 days payment rule, case status, login, and what to do next if your payment is stuck.",
     author: "Hemant Chutani",
     readTime: "4 mins read",
     blogLink: "/blogs/msme-samadhaan-portal-45-day-payment-rule"
