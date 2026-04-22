@@ -40,9 +40,7 @@ export default function HeroSection() {
             }}
         >
             <div className="w-full max-w-sm text-center pt-14 pb-16 ">
-                <h1 className="text-center text-gray-600 mb-4">
-                    Seedhi Baat, Sahi Guidance - MSME Ki Baat
-                </h1>
+
                 {/* Typewriter Text */}
                 <h2 className="text-4xl font-semibold text-gray-800 mb-6 arya">
                     {text}
@@ -70,9 +68,9 @@ export default function HeroSection() {
 
 
                 {/* Subtitle */}
-                <p className="text-gray-700 text-sm mb-6 max-w-52 mx-auto">
-                    Expert <strong>insights</strong> for Indian manufacturers in 60 seconds
-                </p>
+                <h1 className="text-center text-gray-600 mb-4">
+                    Seedhi Baat  and Sahi Guidance for Indian MSMEs
+                </h1>
 
                 {/* Buttons */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
