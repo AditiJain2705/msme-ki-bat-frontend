@@ -14,10 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "MSME Ki Baat",
-  description: "Empowering Indian MSMEs with News, Insights & Resources",
-};
 
 export default function RootLayout({ children }) {
   return (

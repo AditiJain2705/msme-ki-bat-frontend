@@ -6,6 +6,11 @@ import TopAppBar from "@/components/new-home/Topappbar";
 import TopBusinessNewsSection from "@/components/new-home/TopBusinessNewsSection";
 import Image from "next/image";
 
+export const metadata = {
+  title: "MSME Ki Baat",
+  description:
+    "MSME Ki Baat by Hemant Chutani - practical guidance on government schemes, registrations, and business support for Indian Businesses.",
+};
 export default function Home() {
   return (
     <>
