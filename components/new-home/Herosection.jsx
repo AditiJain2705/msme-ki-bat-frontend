@@ -40,7 +40,9 @@ export default function HeroSection() {
             }}
         >
             <div className="w-full max-w-sm text-center pt-14 pb-16 ">
-
+                <h1 className="text-center text-gray-600 mb-4">
+                    Seedhi Baat, Sahi Guidance - MSME Ki Baat
+                </h1>
                 {/* Typewriter Text */}
                 <h2 className="text-4xl font-semibold text-gray-800 mb-6 arya">
                     {text}
