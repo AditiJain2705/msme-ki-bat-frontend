@@ -500,13 +500,11 @@ const Main = () => {
                             If you want more updates like this, follow Hemant Chutani / MSME Ki Baat on:
                         </p>
                         <ul className="list-disc ml-5 space-y-2 pb-4">
-                            <li>Instagram</li>
-                            <li>YouTube: MSME Ki Baat</li>
-                            <li>LinkedIn: Hemant Chutani</li>
+                            <li><Link href={"https://www.instagram.com/hemant_chutani"} target="_blank">Instagram</Link></li>
+                            <li><Link href={"https://www.linkedin.com/in/hemant-chutani-a2974b117"} target="_blank">YouTube: MSME Ki Baat</Link></li>
+                            <li><Link href={"https://youtube.com/@msmekibaat?si=Yu-bnfYPNnqW6buw"} target="_blank"  >LinkedIn: Hemant Chutani</Link></li>
                         </ul>
-                        <p className="nave-font pb-4">
-                            For your developer, these are the social links you provided and they can be used in the author/entity setup.
-                        </p>
+
                         <p className="nave-font pb-4">
                             If you need business-side assistance, clarity on the process, or help understanding which MSME route is right for you, you can contact MSME Ki Baat anytime.
                         </p>
