@@ -51,7 +51,7 @@ export async function POST(request) {
       name: name.trim(),
       email: email.trim().toLowerCase(),
       number: number.trim(),
-      company_name: company_name.trim(),
+      company_name: company_name?.trim() || null,
       message: message?.trim() || null,
       source_page:
         source_page?.trim() || request.headers.get("referer") || null,
