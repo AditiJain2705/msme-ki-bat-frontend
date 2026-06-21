@@ -102,7 +102,6 @@ export default function TopAppBar() {
 
             </div>
 
-            {/* Menu Button */}
             <div className="gap-4 flex">
                 <Link href={"tel:+91 89500 16534"} className="bg-[#4e342e] text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 hover:bg-orange-500" >
                     Call Now
