@@ -14,7 +14,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* railway deployment */}
       <main className="pb-32 lg:pb-12 ">
         <HeroSection />
         <QuickInsights />
