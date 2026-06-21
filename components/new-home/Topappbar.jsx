@@ -9,11 +9,11 @@ import { FaHome } from "react-icons/fa";
 import { RiVideoFill } from "react-icons/ri";
 import { MdOutlineAutoGraph } from "react-icons/md";
 import { IoPersonSharp } from "react-icons/io5";
-import { useState } from "react";
-import LeadFormPopup from "../form/Leadformpopup";
+// import { useState } from "react";
+// import LeadFormPopup from "../form/Leadformpopup";
 
 export default function TopAppBar() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     const pathname = usePathname();
 
@@ -103,14 +103,24 @@ export default function TopAppBar() {
             </div>
 
             {/* Menu Button */}
-            <button
-                className="bg-[#4e342e] text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 "
-                onClick={() => setOpen(true)}
-                aria-label="Open menu"
-            >
-                Contact Us
-            </button>
-            {open && <LeadFormPopup isOpen={open} onClose={() => setOpen(false)} />}
+            <div className="gap-4 flex">
+                <Link href={"tel:+91 89500 16534"} className="bg-[#4e342e] text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 hover:bg-orange-500" >
+                    Call Now
+                </Link>
+                <button
+                    className="bg-[#4e342e] text-on-secondary text-sm lg:text-base font-semibold rounded transition-colors px-2 py-1 cursor-pointer hover:bg-orange-500"
+                    onClick={() => window.open(
+                        "https://docs.google.com/forms/d/e/1FAIpQLScBjul_YJi6l_-xNaE0xNEg1LoOk13zBPaSRpqIw7rMpoMonw/viewform?usp=header",
+                        "_blank",
+                        "noopener,noreferrer"
+                    )}
+                    aria-label="Open Google Form"
+                >
+                    Contact Us
+                </button>
+            </div>
+
+            {/* {open && <LeadFormPopup isOpen={open} onClose={() => setOpen(false)} />} */}
         </header>
     );
 }

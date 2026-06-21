@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-import LeadFormPopup from "../form/Leadformpopup";
+// import { useState } from "react";
+// import LeadFormPopup from "../form/Leadformpopup";
 const TAGS = ["MSME Support", "Business Tips", "Registrations"];
 
 export default function HeritageAnalysis() {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     return (
         <section className="px-6 lg:px-0 pb-4  max-w-6xl mx-auto">
@@ -19,7 +19,12 @@ export default function HeritageAnalysis() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {TAGS.map((tag) => (
-                            <button onClick={() => setOpen(true)}
+                            <button
+                                onClick={() => window.open(
+                                    "https://docs.google.com/forms/d/e/1FAIpQLScBjul_YJi6l_-xNaE0xNEg1LoOk13zBPaSRpqIw7rMpoMonw/viewform?usp=header",
+                                    "_blank",
+                                    "noopener,noreferrer"
+                                )}
                                 key={tag}
                                 className="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[11px] md:text-sm font-bold"
                             >
@@ -29,7 +34,7 @@ export default function HeritageAnalysis() {
                     </div>
                 </div>
             </div>
-            {open && <LeadFormPopup isOpen={open} onClose={() => setOpen(false)} />}
+            {/* {open && <LeadFormPopup isOpen={open} onClose={() => setOpen(false)} />} */}
 
         </section>
     );
