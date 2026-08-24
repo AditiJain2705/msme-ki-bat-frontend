@@ -37,6 +37,7 @@ export default function QuickInsights() {
                 {VIDEOS.map((video) => (
                     <VideoCard
                         key={video.id}
+                        id={video.id}
                         youtubeId={video.youtubeId}
                         duration={video.duration}
                         title={video.title}
