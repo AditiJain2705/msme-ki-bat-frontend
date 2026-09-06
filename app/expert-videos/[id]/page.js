@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { VIDEOS } from "@/components/new-home/Quickinsights";
+import { VIDEOS } from "@/components/new-home/videos";
 import VideoDetailContent from "./VideoDetailContent";
 
 export async function generateMetadata({ params }) {

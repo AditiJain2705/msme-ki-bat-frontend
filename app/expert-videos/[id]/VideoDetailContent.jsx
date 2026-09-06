@@ -6,29 +6,18 @@ import Link from "next/link";
 import {
     RiVideoFill,
     RiArrowLeftLine,
-    RiFileTextLine,
     RiDownload2Line,
     RiSearchLine,
 } from "react-icons/ri";
-import { VIDEOS } from "@/components/new-home/Quickinsights";
+import { VIDEOS } from "@/components/new-home/videos";
 
 export default function VideoDetailContent({ video }) {
     const router = useRouter();
-    const { youtubeId, duration, title } = video;
+    const { youtubeId, duration, title, description, documentLink } = video;
     const embedUrl = `https://www.youtube.com/embed/${youtubeId}`;
 
     const [query, setQuery] = useState("");
     const [searchError, setSearchError] = useState(false);
-
-    const handleDownloadGuide = () => {
-        // Placeholder handler - backend integration to be added later.
-        console.log("Download Guide clicked for video:", video.id);
-    };
-
-    const handleDownloadDocument = () => {
-        // Placeholder handler - backend integration to be added later.
-        console.log("Download Document clicked for video:", video.id);
-    };
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -64,7 +53,7 @@ export default function VideoDetailContent({ video }) {
                         {title}
                     </h1>
                     <p className="font-body text-sm md:text-base text-on-surface-variant mb-2">
-                        By <span className="font-bold text-on-surface">Hemant Chutani</span> · Instagram se aaye ho? Sahi jagah ho ✅
+                        {description}
                     </p>
                     <div className="flex items-center gap-1 text-on-surface-variant">
                         <RiVideoFill />
@@ -73,31 +62,10 @@ export default function VideoDetailContent({ video }) {
                 </div>
 
                 {/* Section 2: Download Actions */}
-                <div className="mb-6">
-                    <button
-                        type="button"
-                        onClick={handleDownloadGuide}
-                        className="relative w-full flex items-center gap-3 bg-surface-container-lowest border-2 border-on-surface rounded-2xl p-3 shadow-[4px_4px_0_var(--color-tertiary-dim)] text-left cursor-pointer hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all"
-                    >
-                        <span className="absolute -top-3 right-3 bg-secondary-container text-on-secondary-container text-[10px] md:text-[11px] font-extrabold uppercase tracking-wide px-2.5 py-0.5 rounded-md border-2 border-on-surface rotate-3">
-                            Free
-                        </span>
-                        <span className="flex items-center justify-center w-10 h-11 rounded-md border-2 border-on-surface bg-surface flex-none">
-                            <RiFileTextLine className="text-lg text-on-surface" />
-                        </span>
-                        <span className="min-w-0">
-                            <span className="block font-headline font-bold text-sm md:text-base">
-                                Download Guide (PDF)
-                            </span>
-                            <span className="block text-xs md:text-sm text-on-surface-variant truncate">
-                                Full details · Step-by-step
-                            </span>
-                        </span>
-                    </button>
-
-                    <button
-                        type="button"
-                        onClick={handleDownloadDocument}
+                {documentLink && <div className="mb-6">
+                    <a
+                        href={documentLink}
+                        download
                         className="mt-3 w-full flex items-center justify-center gap-2 bg-tertiary text-on-tertiary font-headline font-bold text-sm md:text-base rounded-xl px-4 py-3.5 border-2 border-on-surface shadow-[0_3px_0_var(--color-tertiary-dim)] cursor-pointer active:translate-y-[3px] active:shadow-none transition-all"
                     >
                         <RiDownload2Line className="text-lg" />
@@ -105,8 +73,8 @@ export default function VideoDetailContent({ video }) {
                         <span className="bg-secondary-container text-on-secondary-container text-[10px] md:text-[11px] font-extrabold px-2 py-0.5 rounded uppercase">
                             Free
                         </span>
-                    </button>
-                </div>
+                    </a>
+                </div>}
 
                 {/* Search */}
                 <form onSubmit={handleSearch} className="mb-8">

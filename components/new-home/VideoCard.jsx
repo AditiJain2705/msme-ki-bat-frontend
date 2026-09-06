@@ -3,16 +3,11 @@
 import Link from "next/link";
 import { RiVideoFill } from "react-icons/ri";
 
-export default function VideoCard({ id, youtubeId, duration, title }) {
+export default function VideoCard({ video }) {
+    const { id, youtubeId, duration, title, documentLink } = video;
 
     const thumbnail = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
     const youtubeLink = `https://www.youtube.com/shorts/${youtubeId}`;
-
-    const handleDownloadGuide = (e) => {
-        e.preventDefault();
-        // Placeholder handler - backend integration to be added later.
-        console.log("Download Guide clicked for video:", id);
-    };
 
     return (
         <div className="flex-none w-40 md:w-52 group">
@@ -46,12 +41,15 @@ export default function VideoCard({ id, youtubeId, duration, title }) {
             </a>
 
             <div className="flex flex-col gap-2 mt-3">
-                <button
-                    onClick={handleDownloadGuide}
-                    className="bg-secondary w-full text-on-secondary text-xs md:text-sm font-semibold rounded transition-colors px-2 py-1.5 cursor-pointer hover:scale-105 active:scale-95 text-center"
-                >
-                    Download Guide
-                </button>
+                {documentLink && (
+                    <a
+                        href={documentLink}
+                        download
+                        className="bg-secondary w-full text-on-secondary text-xs md:text-sm font-semibold rounded transition-colors px-2 py-1.5 cursor-pointer hover:scale-105 active:scale-95 text-center"
+                    >
+                        Download Document
+                    </a>
+                )}
                 <Link
                     href={`/expert-videos/${id}`}
                     className="bg-surface-container-highest w-full text-primary text-xs md:text-sm font-semibold rounded transition-colors px-2 py-1.5 cursor-pointer hover:scale-105 active:scale-95 text-center"
